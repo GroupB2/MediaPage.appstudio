@@ -50,14 +50,6 @@
             "Watchlist",
             "Watchlist.json"
           ]
-        },
-        {
-          "!type": "External",
-          "file": [
-            "forms",
-            "Brody",
-            "Brody.json"
-          ]
         }
       ],
       "configxml": null,
