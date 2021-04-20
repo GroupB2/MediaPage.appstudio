@@ -1,0 +1,155 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "lblTitle2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "lblWriteReview.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "hmbrMenu2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "inptSearch2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "btnSearch2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "btnWatchlist2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "drpRate2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "btnSubmit.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "selNames.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "inptUserReview.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "txtaReview.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "lblReset.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "btnReviewerProfile.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "Review",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}
