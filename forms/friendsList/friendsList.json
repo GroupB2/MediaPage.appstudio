@@ -3,10 +3,9 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundImage": "",
   "backgroundimage": "images/BackgroundPhoto.jpg",
-  "borderColor": "gray",
-  "borderStyle": "solid",
+  "borderColor": "",
+  "borderStyle": "",
   "borderWidth": "",
   "cached_js": null,
   "cached_js_script_hash": null,
@@ -15,81 +14,70 @@
       "!type": "External",
       "file": [
         "forms",
-        "login",
+        "friendsList",
         "Elements",
-        "inptUserName.json"
+        "lblFriendsList.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "login",
+        "friendsList",
         "Elements",
-        "inptPassword.json"
+        "listGroupFriends.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "login",
+        "friendsList",
         "Elements",
-        "btnLogin.json"
+        "inptSearch9.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "login",
+        "friendsList",
         "Elements",
-        "lblResult.json"
+        "btnSearch9.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "login",
+        "friendsList",
         "Elements",
-        "lblInstructions.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "login",
-        "Elements",
-        "Header2.json"
+        "hmbrMenu5.json"
       ]
     }
   ],
   "class": "",
-  "designHeight": 460,
-  "designWidth": 320,
+  "designHeight": 0,
+  "designWidth": 0,
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "login",
+  "id": "friendsList",
   "language": "JavaScript",
-  "left": 0,
+  "left": "0",
   "locked": false,
   "modal": "false",
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "CULogin.onshow()",
+  "onshow": "friendsList.onshow()",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",
   "script": null,
-  "scroll_options": "mouseWheel:true, scrollbars:true, bounce:true, zoom:false",
-  "scrolling": "false",
   "setFocusID": "",
   "style": "",
   "theme": "",
-  "top": 0,
+  "top": "0",
   "width": 320
 }
