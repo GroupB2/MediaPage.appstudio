@@ -24,10 +24,11 @@ Watchlist.onshow=function(){
     callAPI(requestURL)
     btnRemove.hidden = True
     hmbrMenu4.clear()    // clear out choices before adding ones you want
-    hmbrMenu4.addItem("Login")
     hmbrMenu4.addItem("Home")
-    hmbrMenu4.addItem("Watchlist")
     hmbrMenu4.addItem("Profile")
+    hmbrMenu4.addItem("Friends")
+    hmbrMenu4.addItem("Watchlist")
+    hmbrMenu4.addItem("Movie Theaters")
     hmbrMenu4.addItem("Log Out")
     selWatchlist.clear()
     query = `SELECT m.title, m.avg_score FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE u.username = '${currentUser}' AND mr.watchlist_status = 'Yes' ORDER BY m.title`
@@ -44,22 +45,24 @@ hmbrMenu4.onclick=function(s) {
        return
     }
     switch(s) {
-        case "loginPage":
-            ChangeForm(loginPage)
+        case "Home":
+            ChangeForm(home)
             break
-        case "homePage":
-            ChangeForm(homePage)
+        case "Profile":
+            ChangeForm(profile)
+            break
+        case "Friends":
+            ChangeForm(friendsList)
             break
         case "Watchlist":
             ChangeForm(Watchlist)
             break
-        case "myProfile":
-            ChangeForm(myProfile)
+        case "Movie Theaters":
+            ChangeForm(Maps)
             break
-        case "logOut":
+        case "Log Out":
             ChangeForm(logOut)
             break
-
     }
 }
 

@@ -25,10 +25,11 @@ Review.onshow=function(){
     txtaReview.hidden = True
     btnReviewerProfile.hidden = True
     hmbrMenu2.clear()    // clear out choices before adding ones you want
-    hmbrMenu2.addItem("Login")
     hmbrMenu2.addItem("Home")
-    hmbrMenu2.addItem("Watchlist")
     hmbrMenu2.addItem("Profile")
+    hmbrMenu2.addItem("Friends")
+    hmbrMenu2.addItem("Watchlist")
+    hmbrMenu2.addItem("Movie Theaters")
     hmbrMenu2.addItem("Log Out")
     drpRate2.clear() 
     for (i = 0; i < ratings.length; i++)
@@ -51,19 +52,22 @@ hmbrMenu2.onclick=function(s) {
        return
     }
     switch(s) {
-        case "loginPage":
-            ChangeForm(loginPage)
+        case "Home":
+            ChangeForm(home)
             break
-        case "homePage":
-            ChangeForm(homePage)
+        case "Profile":
+            ChangeForm(profile)
+            break
+        case "Friends":
+            ChangeForm(friendsList)
             break
         case "Watchlist":
             ChangeForm(Watchlist)
             break
-        case "myProfile":
-            ChangeForm(myProfile)
+        case "Movie Theaters":
+            ChangeForm(Maps)
             break
-        case "logOut":
+        case "Log Out":
             ChangeForm(logOut)
             break
     }
@@ -258,5 +262,5 @@ btnWatchlist2.onclick=function(){
 }
 
 btnReviewerProfile.onclick=function(){
-  ChangeForm(friendProfile)
+  ChangeForm(profile)
 }

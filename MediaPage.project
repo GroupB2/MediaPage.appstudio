@@ -50,6 +50,87 @@
             "Watchlist",
             "Watchlist.json"
           ]
+
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "loginPage",
+            "loginPage.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "userAdd",
+            "userAdd.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "home",
+            "home.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "Maps",
+            "Maps.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "logOut",
+            "logOut.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "editProfile",
+            "editProfile.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "pictureSelect",
+            "pictureSelect.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "addFriend",
+            "addFriend.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "friendsList",
+            "friendsList.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "profile",
+            "profile.json"
+          ]
         }
       ],
       "configxml": null,
@@ -71,7 +152,7 @@
       "eslintRules": null,
       "expanded_pmp": null,
       "extraheaders": null,
-      "firstform": "Search",
+      "firstform": "loginPage",
       "fontFamily": "system",
       "googlePlayKey": "certificates/google.json",
       "googlePlayTrack": "production",

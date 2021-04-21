@@ -1,0 +1,101 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "BackgroundPhoto.jpg",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "imgPopcorn.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "lblPopcorn.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "btnProfile.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "btnLogout1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "btnWatchlist4.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "btnFriends.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "btnMaps.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "home",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}

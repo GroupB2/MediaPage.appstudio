@@ -1,0 +1,83 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "BackgroundPhoto.jpg",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "logOut",
+        "Elements",
+        "hmbrMenu31.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "logOut",
+        "Elements",
+        "btnLogout.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "logOut",
+        "Elements",
+        "lblFarewell.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "logOut",
+        "Elements",
+        "lblResult2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "logOut",
+        "Elements",
+        "lblError.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "logOut",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}

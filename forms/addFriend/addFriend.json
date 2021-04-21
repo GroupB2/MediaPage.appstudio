@@ -1,0 +1,101 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "images/BackgroundPhoto.jpg",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "inptFriendSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "btnSearchFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "btnCancelSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "lblMessage2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "inptSearch8.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "btnSearch8.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "hmbrMenu7.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "addFriend",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "addFriend.onshow()",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}

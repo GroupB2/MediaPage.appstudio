@@ -1,0 +1,119 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "BackgroundPhoto.jpg",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "inptFirstName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "inptLastName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "btnSubmitAdd.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblAlertSign.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "inptPassword.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "inptEmail.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "inptPasswordRepeat.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "inptUserName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblPopcornCopy.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "userAdd",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}
