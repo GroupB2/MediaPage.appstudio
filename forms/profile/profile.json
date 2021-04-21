@@ -1,0 +1,191 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "white",
+  "backgroundimage": "",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "imgProfilePic.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "lblUserName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnProfileEdit.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "LblReviews.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "lblWatchList.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "lblReccomendations.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "lblFriends.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnReviews.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnWatchList.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnReccomendations.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnFriends.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnAddReview.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnAddFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "txtaDescriptionProfile.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "inptSearch7.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "btnSearch7.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "profile",
+        "Elements",
+        "hmbrMenu6.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "profile",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}
