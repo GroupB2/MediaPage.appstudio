@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -14,63 +14,99 @@
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "imgPopcorn.json"
+        "imgEdit.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "lblPopcorn.json"
+        "inptName.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "btnProfile.json"
+        "switchPublic.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "btnLogout1.json"
+        "headerProfileEditor.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "btnWatchlist4.json"
+        "btnSaveChanges.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "btnFriends.json"
+        "btnDiscardChanges.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "editProfile",
         "Elements",
-        "btnMaps.json"
+        "lblDescription.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "editProfile",
+        "Elements",
+        "txtaDescription.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "editProfile",
+        "Elements",
+        "btnPicEdit.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "editProfile",
+        "Elements",
+        "lblMessage1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "editProfile",
+        "Elements",
+        "lblMessage4.json"
       ]
     }
   ],
@@ -80,7 +116,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "home",
+  "id": "editProfile",
   "language": "JavaScript",
   "left": "0",
   "locked": false,

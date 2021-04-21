@@ -1,19 +1,15 @@
-/*btnProfile.onclick = function() {
-    ChangeForm(myProfile)
+btnProfile.onclick = function() {
+    ChangeForm(profile)
 }
-*/
+
 btnWatchlist4.onclick = function() {
     ChangeForm(Watchlist)
 }
 
-btnReview.onclick = function() {
-    ChangeForm(Review)
+btnFriends.onclick = function() {
+    ChangeForm(friendsList)
 }
 
-/*btnFriends.onclick = function() {
-    ChangeForm(findFriends)
-}
-*/
 btnLogout1.onclick = function() {
     ChangeForm(logOut)
 }

@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "BackgroundPhoto.jpg",
+  "backgroundimage": "images/BackgroundPhoto.jpg",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -14,63 +14,63 @@
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "imgPopcorn.json"
+        "inptFriendSearch.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "lblPopcorn.json"
+        "btnSearchFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "btnProfile.json"
+        "btnCancelSearch.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "btnLogout1.json"
+        "lblMessage2.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "btnWatchlist4.json"
+        "inptSearch8.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "btnFriends.json"
+        "btnSearch8.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "addFriend",
         "Elements",
-        "btnMaps.json"
+        "hmbrMenu7.json"
       ]
     }
   ],
@@ -80,7 +80,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "home",
+  "id": "addFriend",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -88,7 +88,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "",
+  "onshow": "addFriend.onshow()",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

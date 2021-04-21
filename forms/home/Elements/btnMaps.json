@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnMaps",
-  "left": 101,
+  "left": 102,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 331,
+  "top": 319,
   "value": "Find a Theater",
   "width": "auto"
 }

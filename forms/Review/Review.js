@@ -57,7 +57,7 @@ hmbrMenu2.onclick=function(s) {
             break
         case "Profile":
             ChangeForm(profile)
-            brea
+            break
         case "Friends":
             ChangeForm(friendsList)
             break
@@ -262,5 +262,5 @@ btnWatchlist2.onclick=function(){
 }
 
 btnReviewerProfile.onclick=function(){
-  ChangeForm(friendProfile)
+  ChangeForm(profile)
 }

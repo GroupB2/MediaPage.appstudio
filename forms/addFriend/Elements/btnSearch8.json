@@ -1,7 +1,7 @@
 {
   "!type": "Button_bs4",
   "ChangeForm": "",
-  "appearance": " btn-dark",
+  "appearance": " btn-secondary",
   "backgroundColor": "",
   "badge": "",
   "badgeAppearance": " badge-info",
@@ -28,8 +28,8 @@
   "hidden": "",
   "icon": "",
   "iconTitle": "",
-  "id": "btnWatchlist4",
-  "left": 121,
+  "id": "btnSearch8",
+  "left": "202",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 250,
-  "value": "Watchlist",
-  "width": "auto"
+  "top": "3",
+  "value": "Search",
+  "width": "74"
 }

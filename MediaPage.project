@@ -90,6 +90,22 @@
             "logOut",
             "logOut.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "editProfile",
+            "editProfile.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "pictureSelect",
+            "pictureSelect.json"
+          ]
         }
       ],
       "configxml": null,

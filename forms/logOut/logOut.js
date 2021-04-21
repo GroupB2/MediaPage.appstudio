@@ -18,7 +18,7 @@ hmbrMenu31.onclick=function(s){
             break
         case "Profile":
             ChangeForm(profile)
-            brea
+            break
         case "Friends":
             ChangeForm(friendsList)
             break

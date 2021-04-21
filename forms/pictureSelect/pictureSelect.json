@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -14,63 +14,72 @@
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "imgPopcorn.json"
+        "headerProfilePic.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "lblPopcorn.json"
+        "btnConfirm.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "btnProfile.json"
+        "Image1.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "btnLogout1.json"
+        "Image2.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "btnWatchlist4.json"
+        "Image3.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "btnFriends.json"
+        "Image4.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "home",
+        "pictureSelect",
         "Elements",
-        "btnMaps.json"
+        "Image5.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "pictureSelect",
+        "Elements",
+        "Image6.json"
       ]
     }
   ],
@@ -80,7 +89,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "home",
+  "id": "pictureSelect",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
