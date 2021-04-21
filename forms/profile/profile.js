@@ -1,11 +1,4 @@
 let profileDescription = ""
-let req = ""
-let query = ""
-let query2 = ""
-let query3 = ""
-let results = []
-let pw = "Bi@375B"
-let netID = "ace45611"
 
 btnSearch7.onclick=function() {
   mediaTitle = inptSearch7.value
@@ -39,9 +32,9 @@ profile.onshow=function(){
     hmbrMenu6.addItem("Movie Theaters")
     hmbrMenu6.addItem("Log Out")
     
-    lblUserName.textContent = profileIdentifier
+    lblUserName.textContent = currentUser
     
-    let query = "SELECT `about` FROM user WHERE `username` = '" + profileIdentifier + "'"
+    let query = "SELECT `about` FROM user WHERE `username` = '" + currentUser + "'"
     console.log(query)
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
@@ -70,16 +63,16 @@ hmbrMenu6.onclick=function(s){
        
     switch(s) {
         case "Home":
-            //ChangeForm(homePage)
+            ChangeForm(home)
             break
         case "Friends":
             ChangeForm(friendsList)
             break
         case "Watchlist":
-            //ChangeForm(watchList)
+            ChangeForm(Watchlist)
             break
         case "Movie Theaters":
-            //ChangeForm(movieTheaters)
+            ChangeForm(Maps)
             break
         case "Profile":
             ChangeForm(profile)
@@ -107,10 +100,10 @@ btnReccomendations.onclick=function(){
   alert("This form is yet to be finished")
 }
 
-btnFriends.onclick=function(){
-  ChangeForm(friendsList)
-}
-
 btnAddFriend.onclick=function(){
   ChangeForm(addFriend)
+}
+
+btnFriends1.onclick=function(){
+  ChangeForm(friendsList)
 }

@@ -1,8 +1,10 @@
+//Tiny change
+
 
 editProfile.onshow=function(){
-    lblMessage1 = ""
-    lblDescription = ""
-    inptName.placeholder = profileIdentifier
+    lblMessage1.value = ""
+    lblMessage4.value = ""
+    inptName.placeholder = currentUser
     txtaDescription.placeholder = profileDescription
 }
 
@@ -18,7 +20,7 @@ btnPicEdit.onclick=function(){
 btnSaveChanges.onclick=function(){
     
     if (inptName.value == "")
-        profileIdentifier = inptName.placeholder
+        currentUser = inptName.placeholder
     else{
         let newName = inptName.value
         let oldName = inptName.placeholder
@@ -32,7 +34,7 @@ btnSaveChanges.onclick=function(){
                 req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
                 if (req.status ==  200)  
                     if (req.responseText == 500){   
-                        profileIdentifier = newName
+                        currentUser = newName
                         lblMessage1.textContent = `You have successfully updated ${oldName} to ${newName}.`
                     }else
                         lblMessage1.textContent = `There was a problem updating ${oldName} to ${newName}.`
@@ -48,12 +50,12 @@ btnSaveChanges.onclick=function(){
         let newDescription = txtaDescription.value
         let oldDescription = txtaDescription.placeholder
         
-        query2 = `SELECT about FROM user WHERE username = '${profileIdentifier}'`
+        query2 = `SELECT about FROM user WHERE username = '${currentUser}'`
         req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
         userDescriptionData = JSON.parse(req.responseText)
         if (req.status == 200) {
             if (userDescriptionData.length >= 0) {
-                query3 = "UPDATE user SET `about` ='" + newDescription + "' WHERE `username` = '" + profileIdentifier + "'"
+                query3 = "UPDATE user SET `about` ='" + newDescription + "' WHERE `username` = '" + currentUser + "'"
                 req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query3)
                 if (req.status ==  200)  
                     if (req.responseText == 500){

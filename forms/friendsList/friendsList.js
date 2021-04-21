@@ -34,7 +34,7 @@ friendsList.onshow=function(){
     hmbrMenu5.addItem("Log Out")
 
     //The following code grabs the user's id using the username they used when they first logged in with:
-    query = "SELECT `user_id` FROM user WHERE `username` = '" + profileIdentifier + "'"
+    query = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
         user_id = results[0]
@@ -67,16 +67,16 @@ hmbrMenu5.onclick=function(s){
        
     switch(s) {
         case "Home":
-            //ChangeForm(homePage)
+            ChangeForm(home)
             break
         case "Friends":
             ChangeForm(friendsList)
             break
         case "Watchlist":
-            //ChangeForm(watchList)
+            ChangeForm(Watchlist)
             break
         case "Movie Theaters":
-            //ChangeForm(movieTheaters)
+            ChangeForm(Maps)
             break
         case "Profile":
             ChangeForm(profile)
