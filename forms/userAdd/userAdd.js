@@ -1,8 +1,3 @@
-let req = ""
-let query = ""
-let results = ""
-let pw = "secreta" // put your database password here
-let netID = "amr66568"
 let emailData = []
 let userNameData = []
 

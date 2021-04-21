@@ -24,10 +24,11 @@ WriteReview.onshow=function(){
     callAPI(requestURL)
     txtaReview.hidden = True
     hmbrMenu3.clear()    // clear out choices before adding ones you want
-    hmbrMenu3.addItem("Login")
     hmbrMenu3.addItem("Home")
-    hmbrMenu3.addItem("Watchlist")
     hmbrMenu3.addItem("Profile")
+    hmbrMenu3.addItem("Friends")
+    hmbrMenu3.addItem("Watchlist")
+    hmbrMenu3.addItem("Movie Theaters")
     hmbrMenu3.addItem("Log Out")
     drpRate3.clear() 
     for (i = 0; i < ratings.length; i++)
@@ -45,22 +46,24 @@ hmbrMenu3.onclick=function(s) {
        return
     }
     switch(s) {
-        case "loginPage":
-            ChangeForm(loginPage)
+        case "Home":
+            ChangeForm(home)
             break
-        case "homePage":
-            ChangeForm(homePage)
+        case "Profile":
+            ChangeForm(profile)
+            brea
+        case "Friends":
+            ChangeForm(friendsList)
             break
         case "Watchlist":
             ChangeForm(Watchlist)
             break
-        case "myProfile":
-            ChangeForm(myProfile)
+        case "Movie Theaters":
+            ChangeForm(Maps)
             break
-        case "logOut":
+        case "Log Out":
             ChangeForm(logOut)
             break
-
     }
 }
 

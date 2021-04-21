@@ -1,47 +1,42 @@
 logOut.onshow=function(){
-  hmbrMenu31.clear()    // clear out choices before adding ones you want
-  hmbrMenu31.addItem("Home")
-  hmbrMenu31.addItem("Search")
-  hmbrMenu31.addItem("Friends")
-  hmbrMenu31.addItem("Watchlist")
-  hmbrMenu31.addItem("Movie Theaters")
-  hmbrMenu31.addItem("Profile")
+    hmbrMenu31.clear()    // clear out choices before adding ones you want
+    hmbrMenu31.addItem("Home")
+    hmbrMenu31.addItem("Profile")
+    hmbrMenu31.addItem("Friends")
+    hmbrMenu31.addItem("Watchlist")
+    hmbrMenu31.addItem("Movie Theaters")
+    hmbrMenu31.addItem("Log Out")
 }
 
-hmbrMenu31.onclick=function(s){     // when just click the control. 's' is
-                                 // the object returned
-    if (typeof(s) == "object") { // do nothing
+hmbrMenu31.onclick=function(s){
+    if (typeof(s) == "object") {
        return
     }
-    
-switch(s) {
-case "Home":
-    ChangeForm(home)
-    break
-case "Search":
-    ChangeForm(Search)
-    break
-/*case "Friends":
-    ChangeForm(friends)
-    break
-*/
-case "Watchlist":
-    ChangeForm(Watchlist)
-    break
-case "Movie Theaters":
-    ChangeForm(Maps)
-    break
-/*case "Profile":
-    ChangeForm(myProfile)
-    break
-*/
-
-}
+    switch(s) {
+        case "Home":
+            ChangeForm(home)
+            break
+        case "Profile":
+            ChangeForm(profile)
+            brea
+        case "Friends":
+            ChangeForm(friendsList)
+            break
+        case "Watchlist":
+            ChangeForm(Watchlist)
+            break
+        case "Movie Theaters":
+            ChangeForm(Maps)
+            break
+        case "Log Out":
+            ChangeForm(logOut)
+            break
+    }
 }
 
 
 btnLogout.onclick = function() {
-    ChangeForm(userAdd)
+    ChangeForm(loginPage)
     req = ""
     query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + username + "&pass=" + password + "&database=375groupb2&query=" + query)

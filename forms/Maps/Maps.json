@@ -36,6 +36,24 @@
         "Elements",
         "hmbrMenuMaps.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Maps",
+        "Elements",
+        "inptSearch5.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Maps",
+        "Elements",
+        "btnSearch5.json"
+      ]
     }
   ],
   "class": "",

@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnCL4",
-  "left": 16,
+  "left": 5,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 8,
+  "top": 421,
   "value": "Current Location",
   "width": "auto"
 }

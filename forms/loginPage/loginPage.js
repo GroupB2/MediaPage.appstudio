@@ -12,7 +12,7 @@ btnLogin.onclick = function() {
         
     if (found == True){
         console.log(`Welcome ${currentUser}!`)
-        ChangeForm(profile)
+        ChangeForm(home)
     } 
     else {
         console.log("Oops, something went wrong... make sure your username and/or password is correct!")

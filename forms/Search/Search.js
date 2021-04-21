@@ -1,4 +1,4 @@
-let mediaTitle = 'Finding Nemo'
+let mediaTitle = ''
 let requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
 let netID = 'mbs45316'
 let pw = 'UCTRMX'
@@ -7,7 +7,7 @@ let count = ''
 let releaseDate = ''
 let season = ''
 let ratings = [10, 9.5, 9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0]
-let currentUser = 'amanda'
+let currentUser = ''
 
 function onXHRLoad() {
     let message = ""
@@ -140,10 +140,11 @@ btnSearch.onclick=function() {
 Search.onshow=function(){
     callAPI(requestURL)
     hmbrMenu.clear()    // clear out choices before adding ones you want
-    hmbrMenu.addItem("Login")
     hmbrMenu.addItem("Home")
-    hmbrMenu.addItem("Watchlist")
     hmbrMenu.addItem("Profile")
+    hmbrMenu.addItem("Friends")
+    hmbrMenu.addItem("Watchlist")
+    hmbrMenu.addItem("Movie Theaters")
     hmbrMenu.addItem("Log Out")
     drpRate.clear()
     for (i = 0; i < ratings.length; i++)
@@ -183,19 +184,22 @@ hmbrMenu.onclick=function(s) {
        return
     }
     switch(s) {
-        case "loginPage":
-            ChangeForm(loginPage)
+        case "Home":
+            ChangeForm(home)
             break
-        case "homePage":
-            ChangeForm(homePage)
+        case "Profile":
+            ChangeForm(profile)
+            brea
+        case "Friends":
+            ChangeForm(friendsList)
             break
         case "Watchlist":
             ChangeForm(Watchlist)
             break
-        case "myProfile":
-            ChangeForm(myProfile)
+        case "Movie Theaters":
+            ChangeForm(Maps)
             break
-        case "logOut":
+        case "Log Out":
             ChangeForm(logOut)
             break
     }
