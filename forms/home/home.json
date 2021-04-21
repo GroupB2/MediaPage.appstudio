@@ -14,90 +14,72 @@
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "imgPoster.json"
+        "imgPopcorn.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "lblTitle.json"
+        "lblPopcorn.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "txtaMedia.json"
+        "btnProfile.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "lblRating.json"
+        "btnLogout1.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "hmbrMenu.json"
+        "btnWatchlist4.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "inptSearch.json"
+        "btnFriends.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "btnSearch.json"
+        "btnReview.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "home",
         "Elements",
-        "btnWatchlist.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "lblReview.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "drpRate.json"
+        "btnMaps.json"
       ]
     }
   ],
@@ -107,7 +89,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "Search",
+  "id": "home",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -115,7 +97,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "Search.onshow()",
+  "onshow": "",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

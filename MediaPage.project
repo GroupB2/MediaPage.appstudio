@@ -55,8 +55,40 @@
           "!type": "External",
           "file": [
             "forms",
-            "Brody",
-            "Brody.json"
+            "loginPage",
+            "loginPage.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "userAdd",
+            "userAdd.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "home",
+            "home.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "Maps",
+            "Maps.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "logOut",
+            "logOut.json"
           ]
         }
       ],

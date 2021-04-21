@@ -14,90 +14,45 @@
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "logOut",
         "Elements",
-        "imgPoster.json"
+        "hmbrMenu31.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "logOut",
         "Elements",
-        "lblTitle.json"
+        "btnLogout.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "logOut",
         "Elements",
-        "txtaMedia.json"
+        "lblFarewell.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "logOut",
         "Elements",
-        "lblRating.json"
+        "lblResult2.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "logOut",
         "Elements",
-        "hmbrMenu.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "inptSearch.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "btnSearch.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "btnWatchlist.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "lblReview.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "drpRate.json"
+        "lblError.json"
       ]
     }
   ],
@@ -107,7 +62,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "Search",
+  "id": "logOut",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -115,7 +70,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "Search.onshow()",
+  "onshow": "",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

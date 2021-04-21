@@ -14,90 +14,81 @@
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "imgPoster.json"
+        "inptFirstName.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "lblTitle.json"
+        "inptLastName.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "txtaMedia.json"
+        "btnSubmitAdd.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "lblRating.json"
+        "lblAlertSign.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "hmbrMenu.json"
+        "inptPassword.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "inptSearch.json"
+        "inptEmail.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "btnSearch.json"
+        "inptPasswordRepeat.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "btnWatchlist.json"
+        "inptUserName.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "userAdd",
         "Elements",
-        "lblReview.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "drpRate.json"
+        "lblPopcornCopy.json"
       ]
     }
   ],
@@ -107,7 +98,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "Search",
+  "id": "userAdd",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -115,7 +106,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "Search.onshow()",
+  "onshow": "",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

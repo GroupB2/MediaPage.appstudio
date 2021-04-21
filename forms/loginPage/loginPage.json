@@ -14,90 +14,54 @@
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "loginPage",
         "Elements",
-        "imgPoster.json"
+        "inptUser.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "loginPage",
         "Elements",
-        "lblTitle.json"
+        "inptPassword1.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "loginPage",
         "Elements",
-        "txtaMedia.json"
+        "btnLogin.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "loginPage",
         "Elements",
-        "lblRating.json"
+        "lblWelcome.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "loginPage",
         "Elements",
-        "hmbrMenu.json"
+        "lblResult.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Search",
+        "loginPage",
         "Elements",
-        "inptSearch.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "btnSearch.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "btnWatchlist.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "lblReview.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Search",
-        "Elements",
-        "drpRate.json"
+        "lblInstructions.json"
       ]
     }
   ],
@@ -107,7 +71,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "Search",
+  "id": "loginPage",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -115,7 +79,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "Search.onshow()",
+  "onshow": "",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",
