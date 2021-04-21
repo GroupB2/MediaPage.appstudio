@@ -15,7 +15,7 @@ btnLogin.onclick = function() {
         ChangeForm(home)
     } 
     else {
-        console.log("Oops, something went wrong... make sure your username and/or password is correct!")
+        lblResult.value="Oops, something went wrong... make sure your username and/or password is correct!"
         currentUser = ''
     }
     
