@@ -106,6 +106,30 @@
             "pictureSelect",
             "pictureSelect.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "addFriend",
+            "addFriend.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "friendsList",
+            "friendsList.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "profile",
+            "profile.json"
+          ]
         }
       ],
       "configxml": null,
