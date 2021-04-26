@@ -54,6 +54,15 @@
         "Elements",
         "hmbrMenu5.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "friendsList",
+        "Elements",
+        "btnFriends2.json"
+      ]
     }
   ],
   "class": "",
