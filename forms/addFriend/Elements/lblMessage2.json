@@ -1,7 +1,7 @@
 {
   "!type": "Label_bs4",
   "appearance": "dark",
-  "backgroundColor": "white",
+  "backgroundColor": "grey",
   "borderRadius": "0",
   "bottom": "auto",
   "cached_js": "",
@@ -15,11 +15,11 @@
   "fontSize": "10",
   "fontStyle": "",
   "fontWeight": "",
-  "height": 38,
+  "height": 29,
   "hidden": "",
   "id": "lblMessage2",
   "labelStyle": "text",
-  "left": 53,
+  "left": 54,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -41,8 +41,8 @@
   "pTop": "",
   "right": "auto",
   "script": "",
-  "style": "",
-  "top": 139,
+  "style": "text-align:center;",
+  "top": 198,
   "value": "",
   "width": 225
 }

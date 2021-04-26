@@ -1,7 +1,7 @@
 {
   "!type": "Label_bs4",
   "appearance": "dark",
-  "backgroundColor": "grey",
+  "backgroundColor": "",
   "borderRadius": "0",
   "bottom": "auto",
   "cached_js": "",
@@ -12,14 +12,14 @@
   "display": "",
   "expanded_pmp": null,
   "fontFamily": "",
-  "fontSize": "10",
+  "fontSize": "14",
   "fontStyle": "",
   "fontWeight": "",
-  "height": 44,
+  "height": "auto",
   "hidden": "",
-  "id": "lblFriendsList",
+  "id": "lblFriendSearch",
   "labelStyle": "text",
-  "left": 62,
+  "left": "15",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 49,
-  "value": "",
-  "width": 204
+  "top": "75",
+  "value": "Enter username to search for a friend:",
+  "width": "auto"
 }

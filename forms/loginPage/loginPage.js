@@ -20,6 +20,3 @@ btnLogin.onclick = function() {
     }
     
 }
-btnSignUpNewCopy.onclick=function(){
-  ChangeForm(userAdd)
-}

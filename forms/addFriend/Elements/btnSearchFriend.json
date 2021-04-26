@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnSearchFriend",
-  "left": 237,
+  "left": "255",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 101,
-  "value": "Add Friend",
+  "top": "145",
+  "value": "Search",
   "width": "auto"
 }

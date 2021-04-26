@@ -1,7 +1,7 @@
 {
   "!type": "Listgroup_bs4",
   "appearances": "light",
-  "backgroundColor": "",
+  "backgroundColor": "grey",
   "bottom": "auto",
   "cached_js": "",
   "cached_js_script_hash": "d41d8cd98f00b204e9800998ecf8427e",

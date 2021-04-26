@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnCancelSearch",
-  "left": 176,
+  "left": "180",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -55,12 +55,12 @@
   "popPosition": "",
   "popStyle": "popover",
   "popTitle": "Title",
-  "right": "auto",
+  "right": "15",
   "script": "",
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 101,
-  "value": "return",
-  "width": "auto"
+  "top": "145",
+  "value": "Cancel",
+  "width": "70"
 }

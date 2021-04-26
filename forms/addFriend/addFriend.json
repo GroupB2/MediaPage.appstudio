@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "images/BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -72,6 +72,24 @@
         "Elements",
         "hmbrMenu7.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "lblFriendSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "addFriend",
+        "Elements",
+        "listGFriendSearch.json"
+      ]
     }
   ],
   "class": "",
@@ -94,7 +112,7 @@
   "position": "absolute",
   "script": null,
   "setFocusID": "",
-  "style": "",
+  "style": "text-align:center;",
   "theme": "",
   "top": "0",
   "width": 320

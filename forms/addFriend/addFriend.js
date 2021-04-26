@@ -85,5 +85,6 @@ btnSearchFriend.onclick=function(){
 }
 
 btnCancelSearch.onclick=function(){
-  ChangeForm(profile)
+  inptFriendSearch.value.clear()
+  //ChangeForm(profile)
 }
