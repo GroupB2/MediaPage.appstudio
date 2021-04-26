@@ -89,7 +89,7 @@ btnProfileEdit.onclick=function(){
 }
 
 btnWatchList.onclick=function(){
-  alert("This form is yet to be finished")
+  ChangeForm(Watchlist)
 }
 
 btnReviews.onclick=function(){
