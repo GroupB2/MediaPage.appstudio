@@ -63,6 +63,24 @@
         "Elements",
         "lblInstructions.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "loginPage",
+        "Elements",
+        "btnSignUpNewCopy.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "loginPage",
+        "Elements",
+        "lblNoAccountCopy.json"
+      ]
     }
   ],
   "class": "",

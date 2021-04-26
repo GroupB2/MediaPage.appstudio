@@ -65,17 +65,33 @@ btnSubmitAdd.onclick = function() {
             lblAlertSign.value = "The two passwords don't match"
           if (password == repeatPass) {
             query = "INSERT INTO user (username, first_name, last_name, email, password) VALUES ('" + userName + "','" + FirstName + "',  '" + LastName + "', '" + email + "', '" + password + "')"
-
-
             req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
             if (req.status == 200) {
-              if (req.responseText == 500)
-                lblAlertSign.value = "You have successfully sign up!"
-            } else
+               if (req.responseText == 500) {
+                lblWelcome.value = "You have successfully signed up! Log in here."
+                
+                query = `SELECT user_id FROM user WHERE username = '${userName}'`
+                req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+                results = JSON.parse(req.responseText)
+        
+                user_id = results[0]
+                
+                query = `INSERT INTO friend (friend_id, username, user_id) VALUES (${user_id}, '${userName}', ${user_id})`
+                req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+                
+                ChangeForm(loginPage)
+                }
+            }
+            else
               lblAlertSign.value = "There was a problem with adding the user to the database."
-          } else
+          } 
+          else
             lblAlertSign.value = "Error: " + req.status
         }
       }
     }
     }
+
+btnAlreadyUser.onclick=function(){
+  ChangeForm(loginPage)
+}

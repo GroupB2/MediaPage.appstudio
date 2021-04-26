@@ -90,6 +90,15 @@
         "Elements",
         "lblPopcornCopy.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "btnAlreadyUser.json"
+      ]
     }
   ],
   "class": "",

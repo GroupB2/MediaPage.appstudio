@@ -17,6 +17,11 @@ btnLogin.onclick = function() {
     else {
         console.log("Oops, something went wrong... make sure your username and/or password is correct!")
         currentUser = ''
+        inptUser.value = ''
+        inptPassword1.value = ''
     }
     
+}
+btnSignUpNewCopy.onclick=function(){
+  ChangeForm(userAdd)
 }
