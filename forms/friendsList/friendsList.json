@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "images/BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -53,6 +53,15 @@
         "friendsList",
         "Elements",
         "hmbrMenu5.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "friendsList",
+        "Elements",
+        "btnFriends2.json"
       ]
     }
   ],

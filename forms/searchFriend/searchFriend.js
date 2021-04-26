@@ -1,5 +1,3 @@
-lblMessage2.hidden = True
-
 btnSearch8.onclick=function() {
   mediaTitle = inptSearch8.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
@@ -23,7 +21,11 @@ btnSearch8.onclick=function() {
 }
 
 
-addFriend.onshow=function(){
+searchFriend.onshow=function(){
+    searchFriend.reset()
+    lblFriendResult.value = ""
+    listGFriendSearch.clear()
+
     hmbrMenu7.clear()
     hmbrMenu7.addItem("Home")
     hmbrMenu7.addItem("Profile")
@@ -62,6 +64,35 @@ hmbrMenu7.onclick=function(s){
 
 
 btnSearchFriend.onclick=function(){
+    listGFriendSearch.clear()
+    let userNameFriend = inptFriendSearch.value
+    
+    query = "SELECT `username` FROM user WHERE `username` = '" + userNameFriend + "'"
+    console.log(query)
+    
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+    
+    if (req.status == 200) {       
+        results = JSON.parse(req.responseText)
+        if (results.length == 0){
+            lblFriendResult.value = "Oops, looks like there's no one with that username... make sure you spelled it correctly!"
+        } else {
+            lblFriendResult.value = "Click on a user's name to view their profile!"
+            let message = ""
+            for (i = 0; i < results.length; i++)
+                listGFriendSearch.addItem(message + results[i][0] + "\n")
+        }
+    }
+}
+
+btnCancelSearch.onclick=function(){
+  searchFriend.reset()
+  lblFriendResult.value = ""
+  listGFriendSearch.clear()
+}
+
+/*
+btnSearchFriend.onclick=function(){
     let userNameFriend = inptFriendSearch.value
     
     //The following code grabs the user's id using the username they used when they first logged in with
@@ -83,7 +114,4 @@ btnSearchFriend.onclick=function(){
     } else 
         lblMessage2.textContent = "Error: " + req.status
 }
-
-btnCancelSearch.onclick=function(){
-  ChangeForm(profile)
-}
+*/

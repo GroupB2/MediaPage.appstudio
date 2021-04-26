@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "images/BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -14,7 +14,7 @@
       "!type": "External",
       "file": [
         "forms",
-        "addFriend",
+        "searchFriend",
         "Elements",
         "inptFriendSearch.json"
       ]
@@ -23,7 +23,7 @@
       "!type": "External",
       "file": [
         "forms",
-        "addFriend",
+        "searchFriend",
         "Elements",
         "btnSearchFriend.json"
       ]
@@ -32,7 +32,7 @@
       "!type": "External",
       "file": [
         "forms",
-        "addFriend",
+        "searchFriend",
         "Elements",
         "btnCancelSearch.json"
       ]
@@ -41,16 +41,7 @@
       "!type": "External",
       "file": [
         "forms",
-        "addFriend",
-        "Elements",
-        "lblMessage2.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "addFriend",
+        "searchFriend",
         "Elements",
         "inptSearch8.json"
       ]
@@ -59,7 +50,7 @@
       "!type": "External",
       "file": [
         "forms",
-        "addFriend",
+        "searchFriend",
         "Elements",
         "btnSearch8.json"
       ]
@@ -68,9 +59,36 @@
       "!type": "External",
       "file": [
         "forms",
-        "addFriend",
+        "searchFriend",
         "Elements",
         "hmbrMenu7.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "searchFriend",
+        "Elements",
+        "lblFriendSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "searchFriend",
+        "Elements",
+        "listGFriendSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "searchFriend",
+        "Elements",
+        "lblFriendResult.json"
       ]
     }
   ],
@@ -80,7 +98,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "addFriend",
+  "id": "searchFriend",
   "language": "JavaScript",
   "left": "0",
   "locked": false,

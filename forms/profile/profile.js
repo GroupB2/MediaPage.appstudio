@@ -101,7 +101,7 @@ btnReccomendations.onclick=function(){
 }
 
 btnAddFriend.onclick=function(){
-  ChangeForm(addFriend)
+  ChangeForm(searchFriend)
 }
 
 btnFriends1.onclick=function(){
