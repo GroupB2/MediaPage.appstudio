@@ -1,4 +1,7 @@
+/*
+//For example
 let userNameFriend ="mbs45316"
+*/
 let FriendProfileDescription = ""
 
 btnSearchFriendProfile.onclick=function() {
@@ -175,6 +178,3 @@ btnAddAsFriend.onclick=function(){
 }
 
 
-lblUsername.onclick=function(){
-  
-}
