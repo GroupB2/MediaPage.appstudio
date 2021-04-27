@@ -89,7 +89,7 @@ btnProfileEdit.onclick=function(){
 }
 
 btnWatchList.onclick=function(){
-  alert("This form is yet to be finished")
+  ChangeForm(Watchlist)
 }
 
 btnReviews.onclick=function(){
@@ -101,7 +101,7 @@ btnReccomendations.onclick=function(){
 }
 
 btnAddFriend.onclick=function(){
-  ChangeForm(addFriend)
+  ChangeForm(searchFriend)
 }
 
 btnFriends1.onclick=function(){

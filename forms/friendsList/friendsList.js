@@ -25,6 +25,7 @@ btnSearch9.onclick=function() {
 
 friendsList.onshow=function(){
     listGroupFriends.clear()
+    
     hmbrMenu5.clear()
     hmbrMenu5.addItem("Home")
     hmbrMenu5.addItem("Profile")
@@ -87,3 +88,7 @@ hmbrMenu5.onclick=function(s){
         }
 }
 
+
+btnFriends2.onclick=function(){
+  ChangeForm(searchFriend)
+}

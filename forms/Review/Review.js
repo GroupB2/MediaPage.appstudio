@@ -32,6 +32,7 @@ Review.onshow=function(){
     hmbrMenu2.addItem("Movie Theaters")
     hmbrMenu2.addItem("Log Out")
     drpRate2.clear() 
+    btnSubmit.value = 'Search'
     for (i = 0; i < ratings.length; i++)
         drpRate2.addItem(ratings[i])
     selNames.clear()

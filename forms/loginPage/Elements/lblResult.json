@@ -1,6 +1,6 @@
 {
   "!type": "Label_bs4",
-  "appearance": "dark",
+  "appearance": "secondary",
   "backgroundColor": "",
   "borderRadius": "0",
   "bottom": "auto",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 255,
+  "top": 269,
   "value": "",
   "width": 184
 }

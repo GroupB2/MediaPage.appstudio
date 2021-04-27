@@ -111,8 +111,8 @@
           "!type": "External",
           "file": [
             "forms",
-            "addFriend",
-            "addFriend.json"
+            "searchFriend",
+            "searchFriend.json"
           ]
         },
         {
@@ -129,6 +129,14 @@
             "forms",
             "profile",
             "profile.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendProfile",
+            "FriendProfile.json"
           ]
         }
       ],
@@ -151,7 +159,7 @@
       "eslintRules": null,
       "expanded_pmp": null,
       "extraheaders": null,
-      "firstform": "loginPage",
+      "firstform": "FriendProfile",
       "fontFamily": "system",
       "googlePlayKey": "certificates/google.json",
       "googlePlayTrack": "production",

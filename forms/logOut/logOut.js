@@ -36,23 +36,19 @@ hmbrMenu31.onclick=function(s){
 
 
 btnLogout.onclick = function() {
-    currentUser = inptUser.value
-    let password = inptPassword1.value
-
-    query = `SELECT user_id FROM user WHERE username = '${currentUser}' AND password = '${password}'`
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-    results = JSON.parse(req.responseText)
-
-
-    let found = False
-    if (results[0] != '' && results.length == 1)
-        found = True
-
-    if (found == True) {
-        console.log(`${currentUser} has signed out!`)
-        ChangeForm(loginPage)
-    } else {
-        console.log("Oops, couldn't sign out!")
-        currentUser = ''
-    }
+    ChangeForm(loginPage)
+    req = ""
+    query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + username + "&pass=" + password + "&database=375groupb2&query=" + query)
+    if (req.status == 200) {
+        const userLogout = () => {
+            auth.signOut()
+                .then(function() {
+                    lblResult2.value("You have logged out!")
+                })
+                .catch(function(error) {
+                    lblError.value = "Error -- could not log out!"
+                });
+        }
+    }
 }

@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -14,90 +14,126 @@
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "inptFirstName.json"
+        "imgProfilePicCopy.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "inptLastName.json"
+        "lblUserNameCopy.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "btnSubmitAdd.json"
+        "LblReviewsFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "lblAlertSign.json"
+        "lblWatchListFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "inptPassword.json"
+        "btnReviewsFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "inptEmail.json"
+        "btnWatchListFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "inptPasswordRepeat.json"
+        "btnAddAsFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "inptUserName.json"
+        "txtaDescriptionProfileFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "lblPopcornCopy.json"
+        "inptSearch7Copy.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "userAdd",
+        "FriendProfile",
         "Elements",
-        "btnAlreadyUser.json"
+        "btnSearchFriendProfile.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "hmbrMenuFriendProfile.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblFriendName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblUsername.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblAddFriend.json"
       ]
     }
   ],
@@ -107,7 +143,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "userAdd",
+  "id": "FriendProfile",
   "language": "JavaScript",
   "left": "0",
   "locked": false,

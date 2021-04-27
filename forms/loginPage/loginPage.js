@@ -15,11 +15,10 @@ btnLogin.onclick = function() {
         ChangeForm(home)
     } 
     else {
-        lblResult.value="Oops, something went wrong... make sure your username and/or password is correct!"
+        console.log("Oops, something went wrong... make sure your username and/or password is correct!")
         currentUser = ''
+        inptUser.value = ''
+        inptPassword1.value = ''
     }
     
-}
-btnSignUpNewCopy.onclick=function(){
-  ChangeForm(userAdd)
 }
