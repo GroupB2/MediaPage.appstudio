@@ -1,0 +1,164 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "imgProfilePicCopy.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblUserNameCopy.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "LblReviewsFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblWatchListFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "btnReviewsFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "btnWatchListFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "btnAddAsFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "txtaDescriptionProfileFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "inptSearch7Copy.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "btnSearchFriendProfile.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "hmbrMenuFriendProfile.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblFriendName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblUsername.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendProfile",
+        "Elements",
+        "lblAddFriend.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "FriendProfile",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}
