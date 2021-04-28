@@ -172,4 +172,5 @@ lblReset2.onclick=function(){
         item = results[i][0] + ' | Score: ' + results[i][1]
         selWatchlist.addItem(item)
     }
+    btnSubmit3.value = 'Search List'
 }

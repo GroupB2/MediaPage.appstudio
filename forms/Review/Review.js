@@ -263,5 +263,5 @@ btnWatchlist2.onclick=function(){
 }
 
 btnReviewerProfile.onclick=function(){
-  ChangeForm(profile)
+  ChangeForm(FriendProfile)
 }
