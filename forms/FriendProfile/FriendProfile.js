@@ -1,5 +1,5 @@
 /*
-//For example
+//try with this example
 let userNameFriend ="mbs45316"
 */
 let FriendProfileDescription = ""
