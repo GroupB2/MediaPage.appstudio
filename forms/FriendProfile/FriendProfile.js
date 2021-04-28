@@ -1,7 +1,4 @@
-/*
-//try with this example
 let userNameFriend ="mbs45316"
-*/
 let FriendProfileDescription = ""
 
 btnSearchFriendProfile.onclick=function() {
@@ -138,7 +135,8 @@ hmbrMenuFriendProfile.onclick=function(s){
 //Takes user to various forms from the profile page:
 
 btnWatchListFriend.onclick=function(){
-  ChangeForm(Watchlist)
+  userNameFriend = lblUsername.value
+  ChangeForm(FriendWatchlist)
 }
 
 btnReviewsFriend.onclick=function(){

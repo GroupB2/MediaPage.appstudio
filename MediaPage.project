@@ -130,6 +130,14 @@
             "profile",
             "profile.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendProfile",
+            "FriendProfile.json"
+          ]
         }
       ],
       "configxml": null,
@@ -151,7 +159,7 @@
       "eslintRules": null,
       "expanded_pmp": null,
       "extraheaders": null,
-      "firstform": "userAdd",
+      "firstform": "FriendProfile",
       "fontFamily": "system",
       "googlePlayKey": "certificates/google.json",
       "googlePlayTrack": "production",
