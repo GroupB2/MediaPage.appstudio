@@ -138,6 +138,14 @@
             "FriendProfile",
             "FriendProfile.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendWatchlist",
+            "FriendWatchlist.json"
+          ]
         }
       ],
       "configxml": null,
@@ -159,7 +167,7 @@
       "eslintRules": null,
       "expanded_pmp": null,
       "extraheaders": null,
-      "firstform": "FriendProfile",
+      "firstform": "FriendWatchlist",
       "fontFamily": "system",
       "googlePlayKey": "certificates/google.json",
       "googlePlayTrack": "production",

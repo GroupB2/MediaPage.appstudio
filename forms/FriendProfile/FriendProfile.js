@@ -1,4 +1,6 @@
-let userNameFriend ="mbs45316"
+
+
+
 let FriendProfileDescription = ""
 
 btnSearchFriendProfile.onclick=function() {
@@ -11,7 +13,7 @@ btnSearchFriendProfile.onclick=function() {
   drpRate2.value = 'Rate'
   drpRate3.value = 'Rate'
   
-    query = `SELECT rating FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${userNameFriend}' `
+    query = `SELECT rating FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${currentUser}' `
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
     if (results[0] != '' && results.length == 1) {
