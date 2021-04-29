@@ -28,7 +28,7 @@
   "hidden": "",
   "icon": "",
   "iconTitle": "",
-  "id": "btnAddAsFriend",
+  "id": "btnAddRemFriend",
   "left": 193,
   "mAll": "",
   "mBottom": "",
@@ -62,5 +62,5 @@
   "toggleControl": "",
   "top": 118,
   "value": "Add Friend",
-  "width": 75
+  "width": 90
 }
