@@ -79,7 +79,7 @@
         "forms",
         "searchFriend",
         "Elements",
-        "listGFriendSearch.json"
+        "lblFriendResult.json"
       ]
     },
     {
@@ -88,7 +88,34 @@
         "forms",
         "searchFriend",
         "Elements",
-        "lblFriendResult.json"
+        "lblFriendSearchPic.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "searchFriend",
+        "Elements",
+        "lblFriendUserSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "searchFriend",
+        "Elements",
+        "txtaDescriptionFriendSearch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "searchFriend",
+        "Elements",
+        "btnADDFriend.json"
       ]
     }
   ],
@@ -106,7 +133,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "addFriend.onshow()",
+  "onshow": "searchFriend.onshow()",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

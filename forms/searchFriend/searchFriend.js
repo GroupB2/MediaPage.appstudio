@@ -24,8 +24,12 @@ btnSearch8.onclick=function() {
 searchFriend.onshow=function(){
     searchFriend.reset()
     lblFriendResult.value = ""
-    listGFriendSearch.clear()
-
+    lblFriendSearchPic.hidden = True
+    lblFriendUserSearch.hidden = True
+    txtaDescriptionFriendSearch.hidden = True
+    btnADDFriend.hidden = True
+    
+    
     hmbrMenu7.clear()
     hmbrMenu7.addItem("Home")
     hmbrMenu7.addItem("Profile")
@@ -64,7 +68,7 @@ hmbrMenu7.onclick=function(s){
 
 
 btnSearchFriend.onclick=function(){
-    listGFriendSearch.clear()
+    //listGFriendSearch.clear()
     let userNameFriend = inptFriendSearch.value
     
     query = "SELECT `username` FROM user WHERE `username` = '" + userNameFriend + "'"
@@ -77,18 +81,25 @@ btnSearchFriend.onclick=function(){
         if (results.length == 0){
             lblFriendResult.value = "Oops, looks like there's no one with that username... make sure you spelled it correctly!"
         } else {
-            lblFriendResult.value = "Click on a user's name to view their profile!"
-            let message = ""
+            lblFriendResult.value = `Click on ${userNameFriend}'s username to view their profile!`
+            lblFriendSearchPic.hidden = False
+            lblFriendUserSearch.hidden = False
+            txtaDescriptionFriendSearch.hidden = False
+            btnADDFriend.hidden = False
+            /*let message = ""
             for (i = 0; i < results.length; i++)
-                listGFriendSearch.addItem(message + results[i][0] + "\n")
+                listGFriendSearch.addItem(message + results[i][0] + "\n")*/
         }
     }
 }
 
 btnCancelSearch.onclick=function(){
-  searchFriend.reset()
-  lblFriendResult.value = ""
-  listGFriendSearch.clear()
+    searchFriend.reset()
+    lblFriendResult.value = ""
+    lblFriendSearchPic.hidden = True
+    lblFriendUserSearch.hidden = True
+    txtaDescriptionFriendSearch.hidden = True
+    btnADDFriend.hidden = True
 }
 
 /*
