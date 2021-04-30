@@ -14,126 +14,90 @@
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "imgProfilePicCopy.json"
+        "inptSearch20.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "lblUserNameCopy.json"
+        "btnSearch20.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "LblReviewsFriend.json"
+        "hmbrMenu20.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "lblWatchListFriend.json"
+        "lblPastReviews.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "btnReviewsFriend.json"
+        "inptPastReview.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "btnWatchListFriend.json"
+        "btnSubmit4.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "btnAddRemFriend.json"
+        "btnGoToReview.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "txtaDescriptionProfileFriend.json"
+        "lblReset3.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "inptSearch7Copy.json"
+        "txtaPastReview.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "PastReviews",
         "Elements",
-        "btnSearchFriendProfile.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "hmbrMenuFriendProfile.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "lblFriendName.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "lblUsername.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "lblAddFriend.json"
+        "selReviews.json"
       ]
     }
   ],
@@ -143,7 +107,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "FriendProfile",
+  "id": "PastReviews",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -151,7 +115,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "",
+  "onshow": "PastReviews.onshow()",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

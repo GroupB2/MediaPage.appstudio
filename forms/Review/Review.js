@@ -136,7 +136,7 @@ btnSubmit.onclick=function(){
     selNames.hidden = False
     selNames.clear()
     let un = inptUserReview.value
-    query = `SELECT username, date FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${un}' ORDER BY date DESC`
+    query = `SELECT username, date FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${un}' AND mr.review IS NOT NULL ORDER BY date DESC`
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
     for (i = 0; i < results.length; i++) {
@@ -149,24 +149,33 @@ btnSubmit.onclick=function(){
 else {
     btnSubmit.value = 'Search'
     let placeholder = selNames.text
+    let placeholder2 = placeholder[0] + placeholder[0]
     let usernameReview = ''
+    let newUsernameReview = ''
     let selectedReview = ''
-    for (i = 0; placeholder[i] != ' '; i ++) {
-        usernameReview = usernameReview + placeholder[i]
+    if (placeholder != -1) {
+        for (i = 0; placeholder2 != ' -'; i ++) {
+            usernameReview = usernameReview + placeholder[i]
+            placeholder2 = placeholder[i] + placeholder[i +1]
+        }
+        for (i = 0; i < usernameReview.length - 1; i++) {
+            newUsernameReview = newUsernameReview + usernameReview[i]
+        }
+        query = `SELECT review FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${usernameReview}'`
+        req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+        results = JSON.parse(req.responseText)
+        for (i = 0; i < results.length; i++) {
+            selectedReview = results[i]
+        }
+        selNames.hidden = True
+        txtaReview.hidden = False
+        btnReviewerProfile.hidden = False
     }
-    query = `SELECT review FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${usernameReview}'`
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-    results = JSON.parse(req.responseText)
-    for (i = 0; i < results.length; i++) {
-        selectedReview = results[i]
-    }
-    selNames.hidden = True
-    txtaReview.hidden = False
-    btnReviewerProfile.hidden = False
     if (selectedReview == '')
         txtaReview.value = 'You have not selected a user review to view.'
     else {
         txtaReview.value = `${usernameReview}'s Review:\n${selectedReview}`
+        userNameFriend = usernameReview
     }
   }
     
@@ -185,14 +194,14 @@ lblReset.onclick=function(){
     selNames.hidden = False
     txtaReview.hidden = True
     let item = ''
-    query = `SELECT username, date FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' ORDER BY date DESC`
+    query = `SELECT username, date FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND mr.review IS NOT NULL ORDER BY date DESC`
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
     for (i = 0; i < results.length; i++) {
-        item = results[i][0] + '\n - ' + results[i][1]
+        item = results[i][0] + ' - ' + results[i][1]
         selNames.addItem(item)
     }
-    lblReset = ''
+    btnReviewerProfile.hidden = True
 }
 
 btnWatchlist2.onclick=function(){
@@ -263,5 +272,5 @@ btnWatchlist2.onclick=function(){
 }
 
 btnReviewerProfile.onclick=function(){
-  ChangeForm(FriendProfile)
+    ChangeForm(FriendProfile)
 }

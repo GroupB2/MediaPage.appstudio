@@ -130,6 +130,30 @@
             "profile",
             "profile.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "PastReviews",
+            "PastReviews.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendProfile",
+            "FriendProfile.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendWatchlist",
+            "FriendWatchlist.json"
+          ]
         }
       ],
       "configxml": null,

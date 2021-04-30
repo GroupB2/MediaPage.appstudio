@@ -1,4 +1,4 @@
-let mediaTitle = ''
+let mediaTitle = ""
 let requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
 let netID = 'mbs45316'
 let pw = 'UCTRMX'
@@ -8,7 +8,7 @@ let releaseDate = ''
 let season = ''
 let ratings = [10, 9.5, 9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0]
 let currentUser = ''
-let user
+let userNameFriend = ''
 
 function onXHRLoad() {
     let message = ""

@@ -2,7 +2,7 @@
   "!type": "Form",
   "HTML": null,
   "attributes": "",
-  "background": "white",
+  "background": "",
   "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
@@ -14,126 +14,81 @@
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "imgProfilePicCopy.json"
+        "lblFriendWatchTitle.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "lblUserNameCopy.json"
+        "hmbrFriendWatch.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "LblReviewsFriend.json"
+        "inptSearch4Copy.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "lblWatchListFriend.json"
+        "btnSearchFriendWatch.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "btnReviewsFriend.json"
+        "btnSubmitFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "btnWatchListFriend.json"
+        "selWatchlistFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "btnAddRemFriend.json"
+        "inptWatchlistMediaFriend.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "txtaDescriptionProfileFriend.json"
+        "lblResetFriendWatch.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "FriendProfile",
+        "FriendWatchlist",
         "Elements",
-        "inptSearch7Copy.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "btnSearchFriendProfile.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "hmbrMenuFriendProfile.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "lblFriendName.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "lblUsername.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "FriendProfile",
-        "Elements",
-        "lblAddFriend.json"
+        "btnAddList.json"
       ]
     }
   ],
@@ -143,7 +98,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "FriendProfile",
+  "id": "FriendWatchlist",
   "language": "JavaScript",
   "left": "0",
   "locked": false,

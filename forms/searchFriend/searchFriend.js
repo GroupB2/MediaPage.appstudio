@@ -65,7 +65,7 @@ hmbrMenu7.onclick=function(s){
 
 btnSearchFriend.onclick=function(){
     listGFriendSearch.clear()
-    let userNameFriend = inptFriendSearch.value
+    userNameFriend = inptFriendSearch.value
     
     query = "SELECT `username` FROM user WHERE `username` = '" + userNameFriend + "'"
     console.log(query)
