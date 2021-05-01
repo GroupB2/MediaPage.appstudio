@@ -114,7 +114,7 @@ btnCancelSearch.onclick=function(){
 }
 
 lblFriendUserSearch.onclick=function(){
-  //ChangeForm(friendProfile)
+  ChangeForm(friendsProfile)
 }
 
 btnADDFriend.onclick=function(){

@@ -130,6 +130,14 @@
             "profile",
             "profile.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "friendsProfile",
+            "friendsProfile.json"
+          ]
         }
       ],
       "configxml": null,

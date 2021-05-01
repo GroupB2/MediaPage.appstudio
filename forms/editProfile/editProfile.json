@@ -34,15 +34,6 @@
         "forms",
         "editProfile",
         "Elements",
-        "switchPublic.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "editProfile",
-        "Elements",
         "headerProfileEditor.json"
       ]
     },
