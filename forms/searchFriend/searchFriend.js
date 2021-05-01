@@ -1,3 +1,5 @@
+//global variables:
+
 btnSearch8.onclick=function() {
   mediaTitle = inptSearch8.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
@@ -24,7 +26,7 @@ btnSearch8.onclick=function() {
 searchFriend.onshow=function(){
     searchFriend.reset()
     lblFriendResult.value = ""
-    lblFriendSearchPic.hidden = True
+    imageFriendSearchPic.hidden = True
     lblFriendUserSearch.hidden = True
     txtaDescriptionFriendSearch.hidden = True
     btnADDFriend.hidden = True
@@ -68,7 +70,6 @@ hmbrMenu7.onclick=function(s){
 
 
 btnSearchFriend.onclick=function(){
-    //listGFriendSearch.clear()
     let userNameFriend = inptFriendSearch.value
     
     query = "SELECT `username` FROM user WHERE `username` = '" + userNameFriend + "'"
@@ -81,11 +82,27 @@ btnSearchFriend.onclick=function(){
         if (results.length == 0){
             lblFriendResult.value = "Oops, looks like there's no one with that username... make sure you spelled it correctly!"
         } else {
-            lblFriendResult.value = `Click on ${userNameFriend}'s username to view their profile!`
-            lblFriendSearchPic.hidden = False
+            lblFriendResult.value = `Click on ${userNameFriend}'s username to view their full profile!`
+            imageFriendSearchPic.hidden = False
             lblFriendUserSearch.hidden = False
             txtaDescriptionFriendSearch.hidden = False
             btnADDFriend.hidden = False
+            
+            query2 = "SELECT `username`, `about`, `profile_pic` FROM user WHERE `username` = '" + userNameFriend + "'"
+            console.log(query2)
+            
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
+            if (req.status == 200){ 
+                let friendInfo = JSON.parse(req.responseText)
+                console.log(friendInfo)
+                
+            for (i = 0; i < friendInfo.length; i++) {
+                lblFriendUserSearch.value = friendInfo[i][0]
+                txtaDescriptionFriendSearch.value = friendInfo[i][1]
+                imageFriendSearchPic.src = friendInfo[i][2]
+            }
+            }
+                
             /*let message = ""
             for (i = 0; i < results.length; i++)
                 listGFriendSearch.addItem(message + results[i][0] + "\n")*/
@@ -96,7 +113,7 @@ btnSearchFriend.onclick=function(){
 btnCancelSearch.onclick=function(){
     searchFriend.reset()
     lblFriendResult.value = ""
-    lblFriendSearchPic.hidden = True
+    imageFriendSearchPic.hidden = True
     lblFriendUserSearch.hidden = True
     txtaDescriptionFriendSearch.hidden = True
     btnADDFriend.hidden = True
@@ -126,3 +143,31 @@ btnSearchFriend.onclick=function(){
         lblMessage2.textContent = "Error: " + req.status
 }
 */
+
+lblFriendUserSearch.onclick=function(){
+  //ChangeForm(friendProfile)
+}
+
+btnADDFriend.onclick=function(){
+    let userNameFriend = inptFriendSearch.value
+    
+    //The following code grabs the user's id using the username they used when they first logged in with
+    let query3 = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query3)
+        userResults = JSON.parse(req.responseText)
+        user_id = userResults[0]
+
+    //The following code grabs the friend's user_id with the name entered in the inpt search bar:
+    let query4 = "SELECT `user_id` FROM user WHERE `username` = '" + userNameFriend + "'"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query4)
+        friendResults = JSON.parse(req.responseText)
+        friend_id = friendResults[0]
+    
+    //The following code inserts a new friend into the friend table using the friend's id, the user's username, and the user's id:
+    let query5 = "INSERT INTO friend (`friend_id`,`username`,`user_id`) VALUES ('" + friend_id + "', '" + userNameFriend + "', '" + user_id + "')"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query5)
+    if (req.status == 200) 
+        lblFriendResult.value = `Hooray! You have successfully added ${userNameFriend} as a new friend :)`
+    else 
+        lblMessage2.textContent = "Error: " + req.status
+}

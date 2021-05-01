@@ -25,7 +25,7 @@
   "mLeft": "",
   "mRight": "",
   "mTop": "",
-  "onclick": "",
+  "onclick": "lblFriendUserSearch.onclick()",
   "onmousedown": "",
   "onmousemove": "",
   "onmouseout": "",
