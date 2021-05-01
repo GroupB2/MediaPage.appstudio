@@ -162,12 +162,26 @@ btnADDFriend.onclick=function(){
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query4)
         friendResults = JSON.parse(req.responseText)
         friend_id = friendResults[0]
-    
-    //The following code inserts a new friend into the friend table using the friend's id, the user's username, and the user's id:
-    let query5 = "INSERT INTO friend (`friend_id`,`username`,`user_id`) VALUES ('" + friend_id + "', '" + userNameFriend + "', '" + user_id + "')"
+
+    //The following code check's to see if the users are already friend with each other:
+    let query5 = "SELECT `friend_id` FROM friend WHERE `user_id` = '" + user_id + "'"
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query5)
-    if (req.status == 200) 
-        lblFriendResult.value = `Hooray! You have successfully added ${userNameFriend} as a new friend :)`
-    else 
-        lblMessage2.textContent = "Error: " + req.status
+        friendMatchResults = JSON.parse(req.responseText)
+        
+        let found = False
+        for (i = 0; i < friendMatchResults.length; i++){
+            if (friend_id == friendMatchResults[i][0]){
+                found = True
+                break;
+            }
+        }
+        if (found = True)
+            alert("Looks like your already friends with this user! Try searching a different one...")
+        else {
+            //The following code inserts a new friend into the friend table using the friend's id, the user's username, and the user's id:
+            let query6 = "INSERT INTO friend (`friend_id`,`username`,`user_id`) VALUES ('" + friend_id + "', '" + userNameFriend + "', '" + user_id + "')"
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query6)
+            if (req.status == 200) 
+                lblFriendResult.value = `Hooray! You have successfully added ${userNameFriend} as a new friend :)`
+        }
 }
