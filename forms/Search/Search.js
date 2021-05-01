@@ -16,6 +16,7 @@ function onXHRLoad() {
     
     lblTitle.value = "Error: Movie doesn't exist."
 
+    mediaTitle = apiData.Title
     lblTitle.value = apiData.Title
     lblTitle2.value = apiData.Title
     lblTitle3.value = apiData.Title
@@ -31,8 +32,6 @@ function onXHRLoad() {
     txtaMedia.value = message
     
     imgPoster.src = apiData.Poster
-    
-    score = apiData.imdbRating
     
     countPlaceholder = apiData.imdbVotes
     count = ''
@@ -73,7 +72,7 @@ function onXHRLoad() {
             else 
                 season = "Hasn't been released"
     
-            query = `INSERT INTO media (title, avg_score, vote_count, season) VALUES ('${mediaTitle}', ${score}, ${count}, '${season}')`
+            query = `INSERT INTO media (title, avg_score, vote_count, season, genre) VALUES ('${apiData.Title}', ${apiData.imdbRating}, ${count}, '${season}', '${apiData.Genre}')`
             req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         }
     }

@@ -133,7 +133,7 @@ else {
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
     if (results[0] != '' && results.length == 1)
-        rating = `You rated "${newMediaReview}" a ${results[0]}/10 and`
+        rating = `You rated "${newMediaReview}" a ${results[0]}/10.00 and`
     else
         rating = `You haven't rated "${newMediaReview}" yet, but you`
     if (selectedReview == '')
