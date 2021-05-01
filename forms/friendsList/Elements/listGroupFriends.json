@@ -21,7 +21,7 @@
   "id": "listGroupFriends",
   "itemBadges": "",
   "items": "",
-  "left": 74,
+  "left": 71,
   "listStyle": "ul",
   "mAll": "",
   "mBottom": "",
@@ -50,6 +50,6 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 141,
+  "top": 118,
   "width": "180px"
 }

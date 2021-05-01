@@ -42,7 +42,7 @@ friendsList.onshow=function(){
     //lblFriendsList.textContent = `You are user '${profileIdentifier}' with the user id of '${user_id}'.`
     
     
-    let query2 = "SELECT `username` FROM friend WHERE `friend_id` = '" + user_id + "'"
+    let query2 = "SELECT `username` FROM friend WHERE `user_id` = '" + user_id + "'"
     console.log(query2)
     
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
