@@ -44,7 +44,7 @@
   "min": "",
   "minlength": "",
   "name": "",
-  "onchange": "",
+  "onchange": "inptFriendSearch.onchange()",
   "onclick": "",
   "oncopy": "",
   "oncut": "",

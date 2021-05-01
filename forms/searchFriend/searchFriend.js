@@ -156,3 +156,11 @@ btnADDFriend.onclick=function(){
                 lblFriendResult.value = `Hooray! You have successfully added ${userNameFriend} as a new friend :)`
         }
 }
+
+inptFriendSearch.onchange=function(){
+    lblFriendResult.value = ""
+    imageFriendSearchPic.hidden = True
+    lblFriendUserSearch.hidden = True
+    txtaDescriptionFriendSearch.hidden = True
+    btnADDFriend.hidden = True
+}

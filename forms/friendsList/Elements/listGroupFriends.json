@@ -28,7 +28,7 @@
   "mLeft": "",
   "mRight": "",
   "mTop": "",
-  "onclick": "",
+  "onclick": "listGroupFriends.onclick()",
   "onmousedown": "",
   "onmousemove": "",
   "onmouseout": "",

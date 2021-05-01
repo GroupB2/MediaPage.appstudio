@@ -88,7 +88,10 @@ hmbrMenu5.onclick=function(s){
         }
 }
 
-
 btnFriends2.onclick=function(){
   ChangeForm(searchFriend)
+}
+
+listGroupFriends.onclick=function(){
+  
 }
