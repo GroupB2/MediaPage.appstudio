@@ -1,4 +1,3 @@
-//Tiny change
 
 
 editProfile.onshow=function(){
@@ -6,6 +5,7 @@ editProfile.onshow=function(){
     lblMessage4.value = ""
     inptName.placeholder = currentUser
     txtaDescription.placeholder = profileDescription
+    imgEdit.src = profilePicture
 }
 
 
@@ -19,6 +19,7 @@ btnPicEdit.onclick=function(){
 //Commits changes to the main profile page:
 btnSaveChanges.onclick=function(){
     
+    //The following code updates a user's username:
     if (inptName.value == "")
         currentUser = inptName.placeholder
     else{
@@ -44,6 +45,7 @@ btnSaveChanges.onclick=function(){
         }
     }
     
+    //The following code updates a user's profile description:
     if (txtaDescription.value == "")
         profileDescription = txtaDescription.placeholder
     else{
@@ -68,6 +70,16 @@ btnSaveChanges.onclick=function(){
             }
         }
     }
+    
+    //The following code updates a user's profile picture:
+    newProfilePic = imgEdit.src
+    
+    query3 = "UPDATE user SET `profile_pic` ='" + newProfilePic + "' WHERE `username` = '" + currentUser + "'"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query3)
+    if (req.status ==  200)
+        console.log("you have successfully updated your profile picture!")
+        
+    profilePicture = newProfilePic
     ChangeForm(profile)
 }
 
@@ -77,15 +89,3 @@ btnDiscardChanges.onclick=function(){
     editProfile.reset()
     ChangeForm(profile)
 }
-
-
-/* HAVE YET TO FINISH THIS:
-
-//Changes user's profile visibility - public or private
-switchPublic.onchange=function(){
-    if (switchPublic = true)
-        confirm("By pressing 'ok' you are agreeing to make your profile invisible to other users.")
-    else if (switchPublic = false)
-        confirm("By pressing 'ok' you are agreeing to make your profile visible to other users.")
-}
-*/

@@ -1,4 +1,5 @@
 let profileDescription = ""
+let profilePicture = ""
 
 btnSearch7.onclick=function() {
   mediaTitle = inptSearch7.value
@@ -39,7 +40,6 @@ profile.onshow=function(){
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
         let profileAbout = results[0]
-        console.log(profileAbout)
         
         let found = False
         if (profileAbout != '' && results.length == 1)
@@ -53,7 +53,25 @@ profile.onshow=function(){
             profileDescription = "This user was too lazy to add anything"
             txtaDescriptionProfile.value = profileDescription
         }
-    console.log(txtaDescriptionProfile.value)
+        
+    let query2 = "SELECT `profile_pic` FROM user WHERE `username` = '" + currentUser + "'"
+    console.log(query2)
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
+        imageResults = JSON.parse(req.responseText)
+        let profilePic = imageResults[0]
+        
+        let imageFound = False
+        if (profilePic != '' && imageResults.length == 1){
+            imageFound = True
+        }
+        
+        console.log(imageFound)
+        if (imageFound == True){
+            profilePicture = profilePic
+            imgProfilePic.src = profilePicture
+            console.log(profilePic)
+        }
+
 }
 
 //Hamburger function feature:
