@@ -18,7 +18,6 @@ btnSearch8.onclick=function() {
         drpRate2.value = results[0]
         drpRate3.value = results[0]
     }
-    
     ChangeForm(Search)
 }
 
@@ -30,7 +29,6 @@ searchFriend.onshow=function(){
     lblFriendUserSearch.hidden = True
     txtaDescriptionFriendSearch.hidden = True
     btnADDFriend.hidden = True
-    
     
     hmbrMenu7.clear()
     hmbrMenu7.addItem("Home")
@@ -102,10 +100,6 @@ btnSearchFriend.onclick=function(){
                 imageFriendSearchPic.src = friendInfo[i][2]
             }
             }
-                
-            /*let message = ""
-            for (i = 0; i < results.length; i++)
-                listGFriendSearch.addItem(message + results[i][0] + "\n")*/
         }
     }
 }
@@ -118,31 +112,6 @@ btnCancelSearch.onclick=function(){
     txtaDescriptionFriendSearch.hidden = True
     btnADDFriend.hidden = True
 }
-
-/*
-btnSearchFriend.onclick=function(){
-    let userNameFriend = inptFriendSearch.value
-    
-    //The following code grabs the user's id using the username they used when they first logged in with
-    let query = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-        results = JSON.parse(req.responseText)
-        user_id = results[0]
-    
-    let query2 = "INSERT INTO friend (`friend_id`,`username`,`user_id`) VALUES ('" + user_id + "', '" + userNameFriend + "', '" + user_id + "')"
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
-    if (req.status == 200) { 
-        if (req.responseText == 500){
-            lblMessage2.hidden = False
-            lblMessage2.textContent = "Hooray! You have successfully added a new friend :)"
-        } else {
-            lblMessage2.hidden = False
-            lblMessage2.textContent = "Oops, there was a problem adding the friend... make sure you spelled their username correctly!"
-        }
-    } else 
-        lblMessage2.textContent = "Error: " + req.status
-}
-*/
 
 lblFriendUserSearch.onclick=function(){
   //ChangeForm(friendProfile)
@@ -173,9 +142,11 @@ btnADDFriend.onclick=function(){
             if (friend_id == friendMatchResults[i][0]){
                 found = True
                 break;
-            }
+            } else
+                found = False
         }
-        if (found = True)
+        console.log(found)
+        if (found == True)
             alert("Looks like your already friends with this user! Try searching a different one...")
         else {
             //The following code inserts a new friend into the friend table using the friend's id, the user's username, and the user's id:
