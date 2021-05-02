@@ -26,7 +26,7 @@ btnSearchFriendProfile.onclick=function() {
 FriendProfile.onshow=function(){
   //To try
  // let currentUser="maireni"
-
+    lblAddFriend.textContent =" "
 
     hmbrMenuFriendProfile.clear()
     hmbrMenuFriendProfile.addItem("Home")
