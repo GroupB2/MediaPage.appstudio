@@ -1,6 +1,6 @@
 {
   "!type": "Label_bs4",
-  "appearance": "dark",
+  "appearance": "white",
   "backgroundColor": "",
   "borderRadius": "0",
   "bottom": "auto",
@@ -14,7 +14,7 @@
   "fontFamily": "",
   "fontSize": "20",
   "fontStyle": "",
-  "fontWeight": "",
+  "fontWeight": "500",
   "height": 43,
   "hidden": "",
   "id": "lblPastReviews",

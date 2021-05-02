@@ -1,6 +1,6 @@
 {
   "!type": "Label_bs4",
-  "appearance": "dark",
+  "appearance": "white",
   "backgroundColor": "",
   "borderRadius": "0",
   "bottom": "auto",
@@ -12,14 +12,14 @@
   "display": "",
   "expanded_pmp": null,
   "fontFamily": "",
-  "fontSize": "20",
+  "fontSize": "25",
   "fontStyle": "",
   "fontWeight": "bold",
   "height": "auto",
   "hidden": "",
   "id": "lblFriendsList2",
   "labelStyle": "text",
-  "left": 104,
+  "left": 90,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 86,
+  "top": 78,
   "value": "My Friends:",
   "width": "auto"
 }

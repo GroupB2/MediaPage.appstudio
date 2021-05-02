@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnFriends1",
-  "left": 65,
+  "left": 66,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 433,
+  "top": 391,
   "value": "View Friends",
   "width": 205
 }

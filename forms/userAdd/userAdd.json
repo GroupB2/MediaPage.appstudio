@@ -3,7 +3,7 @@
   "HTML": null,
   "attributes": "",
   "background": "",
-  "backgroundimage": "BackgroundPhoto.jpg",
+  "backgroundimage": "",
   "borderColor": "",
   "borderStyle": "",
   "borderWidth": "",
@@ -88,7 +88,7 @@
         "forms",
         "userAdd",
         "Elements",
-        "lblPopcornCopy.json"
+        "btnAlreadyUser.json"
       ]
     },
     {
@@ -97,7 +97,61 @@
         "forms",
         "userAdd",
         "Elements",
-        "btnAlreadyUser.json"
+        "lblFirstName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblLastName.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "headerUserADD.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblUserNameADD.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblEmailADD.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblPasswordCreate.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "userAdd",
+        "Elements",
+        "lblPasswordCreateCopy.json"
       ]
     }
   ],

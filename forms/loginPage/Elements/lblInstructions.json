@@ -12,14 +12,14 @@
   "display": "",
   "expanded_pmp": null,
   "fontFamily": "",
-  "fontSize": "",
+  "fontSize": "14",
   "fontStyle": "",
   "fontWeight": "",
   "height": "auto",
   "hidden": "",
   "id": "lblInstructions",
   "labelStyle": "text",
-  "left": 21,
+  "left": "15",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 67,
+  "top": "95",
   "value": "Enter your username and password:",
-  "width": 301
+  "width": 241
 }

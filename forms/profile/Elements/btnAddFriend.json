@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnAddFriend",
-  "left": 210,
+  "left": 198,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 412,
+  "top": 368,
   "value": "Add Friend",
   "width": 75
 }

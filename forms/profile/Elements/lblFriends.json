@@ -19,7 +19,7 @@
   "hidden": "",
   "id": "lblFriends",
   "labelStyle": "text",
-  "left": 42,
+  "left": 44,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 416,
+  "top": 372,
   "value": "My Friends",
   "width": 235
 }

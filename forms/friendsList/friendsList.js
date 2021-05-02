@@ -53,9 +53,8 @@ friendsList.onshow=function(){
             lblFriendsList.hidden = False
             lblFriendsList.textContent = "Looks like you don't have any friends at the moment."
         } else { 
-            let message = ""
             for (i = 0; i < results.length; i++)
-                listGroupFriends.addItem(message + results[i][0] + "\n")
+                listGroupFriends.addItem(results[i][0])
                 
         }
     }
@@ -92,11 +91,16 @@ btnFriends2.onclick=function(){
   ChangeForm(searchFriend)
 }
 
-listGroupFriends.onclick=function(s){
-    /*if (typeof(s) === "object")
-       return
-    
-    console.log(s)
-    //establishing golobal variables*/
-    ChangeForm(FriendProfile)
+listGroupFriends.onclick=function(t){
+    if (typeof(t) === "object"){
+        return
+        console.log(NSB.$("listGroupFriends_" + t).textContent)
+    }
+    else{
+        randomVariable = NSB.$("listGroupFriends_" + t).textContent
+        userNameFriend = randomVariable.trim()
+        console.log(NSB.$("listGroupFriends_" + t).textContent)
+        console.log(userNameFriend.length)
+        ChangeForm(FriendProfile)
+    }
 }

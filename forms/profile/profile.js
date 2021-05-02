@@ -141,10 +141,6 @@ btnReviews.onclick=function(){
   ChangeForm(PastReviews)
 }
 
-btnReccomendations.onclick=function(){
-  alert("This form is yet to be finished")
-}
-
 btnAddFriend.onclick=function(){
   ChangeForm(searchFriend)
 }

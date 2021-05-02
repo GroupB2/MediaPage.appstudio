@@ -1,5 +1,3 @@
-//global variables:
-
 btnSearch8.onclick=function() {
   mediaTitle = inptSearch8.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
@@ -123,7 +121,8 @@ btnCancelSearch.onclick=function(){
 }
 
 lblFriendUserSearch.onclick=function(){
-  ChangeForm(FriendProfile)
+    userNameFriend = lblFriendUserSearch.value
+    ChangeForm(FriendProfile)
 }
 
 btnADDFriend.onclick=function(){

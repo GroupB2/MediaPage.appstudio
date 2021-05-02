@@ -2,7 +2,7 @@
   "!type": "Dropdown_bs4",
   "align": "",
   "appearance": " btn-secondary",
-  "backgroundColor": "",
+  "backgroundColor": "darkred",
   "badge": "",
   "badgeAppearance": " badge-info",
   "blockLevel": "",
