@@ -1,3 +1,19 @@
+let NameQuery = "SELECT `first_name` FROM user WHERE `username` = '" + userNameFriend + "'"
+    console.log(NameQuery)
+    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + NameQuery)
+        resultsName = JSON.parse(req1.responseText)
+        let FriendName = resultsName[0]
+        console.log(FriendName)
+
+        let foundName = False
+        if (FriendName != '' && resultsName.length == 1)
+            foundName = True
+
+        if (foundName == True){
+            FriendFirstName = FriendName
+            console.log(FriendFirstName)
+        }
+
 btnSearchFriendWatch.onclick=function() {
   mediaTitle = inptSearch4Copy.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
@@ -220,7 +236,7 @@ btnSubmitFriend.onclick=function(){
 }
 
 selWatchlistFriend.onclick=function(){
-    if (selWatchlistFriend.text != `This movie is not in ${userNameFriend}'s watchlist.`) {
+    if (selWatchlistFriend.text != `This movie is not in ${FriendFirstName}'s watchlist.`) {
         btnSubmitFriend.value = 'Go to Page'
         btnAddList.hidden = False
     }
