@@ -25,7 +25,7 @@
         "forms",
         "home",
         "Elements",
-        "lblPopcorn.json"
+        "inptSearchHome.json"
       ]
     },
     {
@@ -34,7 +34,7 @@
         "forms",
         "home",
         "Elements",
-        "btnProfile.json"
+        "btnSearchHome.json"
       ]
     },
     {
@@ -43,7 +43,7 @@
         "forms",
         "home",
         "Elements",
-        "btnLogout1.json"
+        "hmbrMenuHome.json"
       ]
     },
     {
@@ -52,7 +52,7 @@
         "forms",
         "home",
         "Elements",
-        "btnWatchlist4.json"
+        "lblWelcomeUser.json"
       ]
     },
     {
@@ -61,7 +61,7 @@
         "forms",
         "home",
         "Elements",
-        "btnFriends.json"
+        "imgOurRec1.json"
       ]
     },
     {
@@ -70,7 +70,61 @@
         "forms",
         "home",
         "Elements",
-        "btnMaps.json"
+        "imgOurRec2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "imgOurRec3.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "lblOurRec.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "imgYourRec1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "imgYourRec2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "imgYourRec3.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "home",
+        "Elements",
+        "lblRecommendation.json"
       ]
     }
   ],
@@ -88,7 +142,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "",
+  "onshow": "home.onshow()",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",

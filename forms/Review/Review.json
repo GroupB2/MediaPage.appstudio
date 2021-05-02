@@ -16,24 +16,6 @@
         "forms",
         "Review",
         "Elements",
-        "lblTitle2.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Review",
-        "Elements",
-        "lblWriteReview.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "Review",
-        "Elements",
         "hmbrMenu2.json"
       ]
     },
@@ -115,7 +97,7 @@
         "forms",
         "Review",
         "Elements",
-        "lblReset.json"
+        "btnReviewerProfile.json"
       ]
     },
     {
@@ -124,7 +106,25 @@
         "forms",
         "Review",
         "Elements",
-        "btnReviewerProfile.json"
+        "btnWriteReview.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "btnReset.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Review",
+        "Elements",
+        "btnTitle2.json"
       ]
     }
   ],

@@ -1,4 +1,4 @@
-let mediaTitle = ''
+let mediaTitle = ""
 let requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
 let netID = 'mbs45316'
 let pw = 'UCTRMX'
@@ -8,16 +8,26 @@ let releaseDate = ''
 let season = ''
 let ratings = [10, 9.5, 9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0]
 let currentUser = ''
+let userNameFriend = ''
+let homeMedia1 = ''
+let homeMedia2 = ''
+let homeMedia3 = ''
+let homeMedia4 = ''
+let homeMedia5 = ''
+let homeMedia6 = ''
 
 function onXHRLoad() {
     let message = ""
     let apiData = JSON.parse(this.responseText)
     
     lblTitle.value = "Error: Movie doesn't exist."
+    btnTitle2.value = "Error: Movie doesn't exist."
+    btnTitle3.value = "Error: Movie doesn't exist."
 
+    mediaTitle = apiData.Title
     lblTitle.value = apiData.Title
-    lblTitle2.value = apiData.Title
-    lblTitle3.value = apiData.Title
+    btnTitle2.value = apiData.Title
+    btnTitle3.value = apiData.Title
     lblRating.value = "Popcorn Score: " + apiData.imdbRating
     
     message = message + "Release Date: "+ apiData.Released + "\n"
@@ -30,8 +40,6 @@ function onXHRLoad() {
     txtaMedia.value = message
     
     imgPoster.src = apiData.Poster
-    
-    score = apiData.imdbRating
     
     countPlaceholder = apiData.imdbVotes
     count = ''
@@ -72,7 +80,7 @@ function onXHRLoad() {
             else 
                 season = "Hasn't been released"
     
-            query = `INSERT INTO media (title, avg_score, vote_count, season) VALUES ('${mediaTitle}', ${score}, ${count}, '${season}')`
+            query = `INSERT INTO media (title, avg_score, vote_count, season, genre) VALUES ('${apiData.Title}', ${apiData.imdbRating}, ${count}, '${season}', '${apiData.Genre}')`
             req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         }
     }
@@ -257,7 +265,7 @@ drpRate.onclick=function(s){
    }
 }
 
-lblReview.onclick=function(){
+btnReview.onclick=function(){
   ChangeForm(Review)
 }
 

@@ -111,7 +111,7 @@ btnWatchList.onclick=function(){
 }
 
 btnReviews.onclick=function(){
-  alert("This form is yet to be finished")
+  ChangeForm(PastReviews)
 }
 
 btnReccomendations.onclick=function(){

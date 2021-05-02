@@ -135,8 +135,32 @@
           "!type": "External",
           "file": [
             "forms",
-            "friendsProfile",
-            "friendsProfile.json"
+            "PastReviews",
+            "PastReviews.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendProfile",
+            "FriendProfile.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendWatchlist",
+            "FriendWatchlist.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendPastReviews",
+            "FriendPastReviews.json"
           ]
         }
       ],
@@ -159,7 +183,7 @@
       "eslintRules": null,
       "expanded_pmp": null,
       "extraheaders": null,
-      "firstform": "loginPage",
+      "firstform": "userAdd",
       "fontFamily": "system",
       "googlePlayKey": "certificates/google.json",
       "googlePlayTrack": "production",

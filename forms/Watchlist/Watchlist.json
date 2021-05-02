@@ -79,7 +79,7 @@
         "forms",
         "Watchlist",
         "Elements",
-        "lblReset2.json"
+        "btnRemove.json"
       ]
     },
     {
@@ -88,7 +88,7 @@
         "forms",
         "Watchlist",
         "Elements",
-        "btnRemove.json"
+        "btnReset2.json"
       ]
     }
   ],
