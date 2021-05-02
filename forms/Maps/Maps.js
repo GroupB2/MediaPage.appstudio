@@ -19,149 +19,113 @@ btnSearch5.onclick=function() {
     
     ChangeForm(Search)
 }
-/*
-This gets your current location and marks it, then also marks the other 4 
-locations coded below. You could hard-code these like they are or 
-use a variable. 
-* remember, you may have to zoom out the map to see all of the markers. 
+/*   TO USE THIS PROJECT 
+This project uses a Google Places API to get rental apartments by CU. 
+It then takes these results and uses them in a Google Maps API to make a map with clickable markers. 
 
-Before this will work, you need a Google Cloud API key that is enabled
-for use with Google Maps and Google Places API's, and that is associated 
-with a Billing account (in case you are a hacker). 
-  
-So do this: 
-Get a Google Maps api key and then enable it for Google Maps APIs and 
-for Google Places APIs (most common ones). To enable the key with these two, 
-go to your Google Maps Console (search “google api 
-key dashboard console”). Then click left menu 
-‘Credentials’. Pick your API key, and click 'Library' in left side menu. On next 
-page click the ‘Maps Javascript API’ one. On next 
-page click ‘Enable’. Repeat for 'Places API'. 
-
-Next you have to go to billing and give Google your 
-credit card for this API. You can cancel this when course is done 
-(if you get charged at all, it will only be pennies). 
-
-Now put your API key in the apikey property. 
+1. Make sure your Google Project that the API key is for is attached to the Google Maps and Google Places API's (in Google Console > Libraries). 
+2. Make sure your Google Project is attached to a billing account (you'll have to give them your credit card - you won't get charges, cancel after class is over)
+3. Add your own Google API key to the Project Property 'extra headers' as indicated.
+4. Add the same googleAPI key to the api call in 'requestURLApt' below as indicated
 */
 
-// say I got this data from an API call I made to 
-// Google (using my Postman-generated URL). 
+let requestURL2 = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=theater&key=AIzaSyAGZ6PSIvz339qdRJ2ZMf1EMxESs5rbdJ4&location=41.265331,-95.949364&radius=5000"
+var theaters = []
+var infoTheaters = []
 
-myPlaces = [
-              {name: "Zio's",lat:41.258650,lon:-95.937190},
-              {name: "Godfathers Pizza",lat:41.259690,lon:-95.933220}
-            ]
+function onXHRLoad4() {
 
-var marker
-var infowindow
-var currentLat, currentLong
+  // 'this' is another name for the object returned from the API call
+  let apiData = JSON.parse(this.responseText)
+  // good data coming back from API call
 
-function gotLocation(location, lat, long) {
-
-    GoogleMap4.mapOptions.latitude = location.coords.latitude
-    GoogleMap4.mapOptions.longitude = location.coords.longitude
-    
-    currentLat22 =location.coords.latitude
-    currentLong22 = location.coords.longitude
-    console.log(`lat and long are ${currentLat22} and ${currentLong22}`)
-    GoogleMap4.refresh()
-
-    //Put a marker on our location
-    point1 = new google.maps.LatLng(location.coords.latitude, location.coords.longitude)
-    marker1 = GoogleMap4.setMarker({
-        position: point1,
-        title: "My Location"    // hover by balloon tip tooltip name
-    })
-
-  //Alamo Drafthouse
-    point2 = new google.maps.LatLng(41.25772803840716, -95.96113807316209);
-    marker2 = GoogleMap4.setMarker({
-        position: point2
-    })
-
-    //Film Streams' Ruth Sokolof Theater
-    point3 = new google.maps.LatLng(41.26619945311871, -95.93434147501375);
-    marker3 = GoogleMap4.setMarker({
-        position: point3
-    })
-
-    //Film Streams' Dundee Theater
-    point4 = new google.maps.LatLng(41.2600003684995, -95.98986735781811);
-    marker4 = GoogleMap4.setMarker({
-        position: point4
-    })
-
-    //Aksarben Cinema
-    point5 = new google.maps.LatLng(41.240056972286425, -96.01573220199852);
-    marker5 = GoogleMap4.setMarker({
-        position: point5
-    })
-
-   //Dream Theaters
-    point6 = new google.maps.LatLng(41.24841694387101, -96.02941840199834);
-    marker6 = GoogleMap4.setMarker({
-        position: point6
-})
-
-   //Regal Omaha
-    point7 = new google.maps.LatLng(41.31380430017689, -96.02828074432465);
-    marker7 = GoogleMap4.setMarker({
-        position: point7
-        })
-
-   //Marcus Twin Creek Cinema
-    point8 = new google.maps.LatLng(41.14724633933665, -95.97117478850885);
-    marker8 = GoogleMap4.setMarker({
-        position: point8
-        })
-
-   //AMC Theatres
-    point9 = new google.maps.LatLng(41.26707272174916, -96.06823957316185);
-    marker9 = GoogleMap4.setMarker({
-        position: point9
-        })
-        
-    //Marcus Majestic Cinema of Omaha
-    point10 = new google.maps.LatLng(41.29366456489825, -96.1359223866532);
-    marker10 = GoogleMap4.setMarker({
-        position: point10
-        })      
-          
-    //Westwood Cinema 8
-    point11 = new google.maps.LatLng(41.23216366237787, -96.10822073083472);
-    marker11 = GoogleMap4.setMarker({
-        position: point11
-        })          
-         
-    //Lozier IMAX at Omaha's Henry Doorly Zoo
-    point12 = new google.maps.LatLng(41.22840756010603, -95.92789703083479);
-    marker12 = GoogleMap4.setMarker({
-        position: point12
-        })        
-        
-  //Alamo Drafthouse Cinema - La Vista
-    point13 = new google.maps.LatLng(41.17944248055297, -96.11548451549211);
-    marker13 = GoogleMap4.setMarker({
-        position: point13
-        })        
-        
-    
-    let tempPoint = ""
-    let tempMarker = ""
-    for (i = 0; i < myPlaces.length;i++) {
-      tempPoint = new google.maps.LatLng(myPlaces[i].lat,myPlaces[i].lon)
-      tempMarker = GoogleMap4.setMarker({
-        position: tempPoint
-      })
-    }
+  for (i = 0; i < apiData.results.length; i++) 
+    theaters[i] = {
+      "description": apiData.results[i].name,
+      "lat": apiData.results[i].geometry.location.lat,
+      "lng": apiData.results[i].geometry.location.lng,
+      "address": apiData.results[i].formatted_address
+  }
 }
 
+function callAPI4(URL) {
+  var xhttp = new XMLHttpRequest()
+
+  // if you need cors (you'll get a cors error if you don't have it and you need it)
+  // use this code to add the cors code to your url 
+  xhttp.open('GET', 'https://cors.bridged.cc/' + requestURL2)
+
+  // if you DON'T need cors use this code:
+  //xhttp.open('GET',URL)
+
+  // Headers
+  // if you need to set the returned data type, use this line of code: 
+  //xhttp.setRequestHeader('Content-Type', 'application/json')
+
+  // if you need authorization token (stored in myToken) use this line of code: 
+  // xhttp.setRequestHeader('Authorization', 'Bearer ' + myToken)
+
+  // if you need a key and it's not in the url use code in one of the following
+  // examples (think of headers as parameters)
+  // or just use the Postman url which has all the parameters already added like I did here. 
+
+  // make the API request
+  xhttp.addEventListener('load', onXHRLoad4)
+  xhttp.send()
+}
+
+// put down markers
+window.onload = function() {
+  callAPI4(requestURL2)
+}
 
 btnCL4.onclick = function() {
-    // have to run this before you do anything else - call this getLocation button
-    navigator.geolocation.getCurrentPosition(gotLocation)
-    NSB.WaitCursor(true)
+// description is what will show in Info window
+  for (i = 0; i < theaters.length; i++) {
+        infoTheaters[i] = {
+          "description": theaters[i].description + "<br> " + theaters[i].address,
+          "lat": theaters[i].lat,
+          "lng": theaters[i].lng
+        }
+  }
+  LoadMap()
+}
+
+// make the map with markers
+function LoadMap() {
+
+  var mapOptions = {
+    center: new google.maps.LatLng(infoTheaters[0].lat, infoTheaters[0].lng),
+    zoom: 13,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions)
+
+  //Create and open InfoWindow.
+  var infoWindow = new google.maps.InfoWindow()
+  var myLatlng
+  for ( i = 0; i < infoTheaters.length; i++) {
+    data = infoTheaters[i]
+    myLatLng = new google.maps.LatLng(data.lat, data.lng)
+    marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: data.description
+    });    // leave semi-colon here
+    //Attach click event to the marker.
+    
+    /*  when function inside (), means it is self-starting function - just runs without being called. 
+    () after closing }) shows functions' parameters (if any) */
+    (function(marker, data) {
+        google.maps.event.addListener(marker, "click", function(e) {
+              //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+              infoWindow.setContent("<div style = 'width:150px;min-height:35px'>" + data.description + "</div>")
+              infoWindow.open(map, marker)
+          })   
+    }
+    )(marker, data)  
+    
+  }  // for looop
 }
 
 Maps.onshow=function(){
@@ -171,6 +135,7 @@ Maps.onshow=function(){
     hmbrMenuMaps.addItem("Friends")
     hmbrMenuMaps.addItem("Watchlist")
     hmbrMenuMaps.addItem("Movie Theaters")
+    hmbrMenuMaps.addItem("Twitter")
     hmbrMenuMaps.addItem("Log Out")
 }
 
@@ -194,8 +159,24 @@ hmbrMenuMaps.onclick=function(s) {
         case "Movie Theaters":
             ChangeForm(Maps)
             break
+        case "Twitter":
+            ChangeForm(twitter)
+            break
         case "Log Out":
-            ChangeForm(logOut)
+            ChangeForm(loginPage)
+            query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+            if (req.status == 200) {
+                const userLogout = () => {
+                    auth.signOut()
+                        .then(function() {
+                            lblResult2.value("You have logged out!")
+                        })
+                        .catch(function(error) {
+                            lblError.value = "Error -- could not log out!"
+                        });
+                }
+            }
             break
     }
 }

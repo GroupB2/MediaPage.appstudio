@@ -31,6 +31,7 @@ profile.onshow=function(){
     hmbrMenu6.addItem("Friends")
     hmbrMenu6.addItem("Watchlist")
     hmbrMenu6.addItem("Movie Theaters")
+    hmbrMenu6.addItem("Twitter")
     hmbrMenu6.addItem("Log Out")
     
     lblUserName.textContent = currentUser
@@ -121,6 +122,9 @@ hmbrMenu6.onclick=function(s){
             break
         case "Profile":
             ChangeForm(profile)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(loginPage)

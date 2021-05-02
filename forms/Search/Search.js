@@ -153,6 +153,7 @@ Search.onshow=function(){
     hmbrMenu.addItem("Friends")
     hmbrMenu.addItem("Watchlist")
     hmbrMenu.addItem("Movie Theaters")
+    hmbrMenu.addItem("Twitter")
     hmbrMenu.addItem("Log Out")
     drpRate.clear()
     for (i = 0; i < ratings.length; i++)
@@ -206,6 +207,9 @@ hmbrMenu.onclick=function(s) {
             break
         case "Movie Theaters":
             ChangeForm(Maps)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(loginPage)

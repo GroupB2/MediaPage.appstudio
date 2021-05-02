@@ -27,6 +27,7 @@ FriendPastReviews.onshow=function(){
     hmbrMenu21.addItem("Friends")
     hmbrMenu21.addItem("Watchlist")
     hmbrMenu21.addItem("Movie Theaters")
+    hmbrMenu21.addItem("Twitter")
     hmbrMenu21.addItem("Log Out")
     txtaPastReview2.hidden = True
     btnGoToReview2.hidden = True
@@ -62,6 +63,9 @@ hmbrMenu21.onclick=function(s) {
             break
         case "Movie Theaters":
             ChangeForm(Maps)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(loginPage)

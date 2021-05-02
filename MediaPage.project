@@ -162,6 +162,14 @@
             "FriendPastReviews",
             "FriendPastReviews.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "twitter",
+            "twitter.json"
+          ]
         }
       ],
       "configxml": null,
