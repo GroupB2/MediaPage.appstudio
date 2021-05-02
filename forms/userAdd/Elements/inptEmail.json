@@ -19,13 +19,13 @@
   "display": "",
   "expanded_pmp": null,
   "fontFamily": "",
-  "fontSize": "",
+  "fontSize": "10",
   "fontStyle": "",
   "fontWeight": "",
   "footer": "",
-  "header": "Email",
+  "header": "",
   "headerCols": 3,
-  "height": "auto",
+  "height": 30,
   "hidden": "",
   "icon": "",
   "iconTitle": "",
@@ -83,9 +83,9 @@
   "spellcheck": "true",
   "step": "",
   "style": "",
-  "top": 193,
+  "top": "215",
   "validation": "",
   "value": "",
   "valueCols": 10,
-  "width": 279
+  "width": 280
 }

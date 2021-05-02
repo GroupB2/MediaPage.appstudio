@@ -12,14 +12,14 @@
   "display": "",
   "expanded_pmp": null,
   "fontFamily": "",
-  "fontSize": "",
+  "fontSize": "10",
   "fontStyle": "",
   "fontWeight": "",
-  "height": 56,
+  "height": "30",
   "hidden": "",
   "id": "lblResult",
   "labelStyle": "text",
-  "left": 67,
+  "left": "7",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 269,
+  "top": "265",
   "value": "",
-  "width": 184
+  "width": "250"
 }

@@ -2,11 +2,11 @@
   "!type": "Form",
   "HTML": null,
   "attributes": "",
-  "background": "",
-  "backgroundimage": "BackgroundPhoto.jpg",
-  "borderColor": "",
-  "borderStyle": "",
-  "borderWidth": "",
+  "background": "white",
+  "backgroundimage": "",
+  "borderColor": "darkred",
+  "borderStyle": "solid",
+  "borderWidth": "30",
   "cached_js": null,
   "cached_js_script_hash": null,
   "children": [
@@ -62,6 +62,24 @@
         "loginPage",
         "Elements",
         "lblInstructions.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "loginPage",
+        "Elements",
+        "HeaderLogin.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "loginPage",
+        "Elements",
+        "ImageLogin.json"
       ]
     }
   ],

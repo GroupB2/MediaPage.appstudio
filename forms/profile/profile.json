@@ -61,15 +61,6 @@
         "forms",
         "profile",
         "Elements",
-        "lblReccomendations.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "profile",
-        "Elements",
         "lblFriends.json"
       ]
     },
@@ -89,15 +80,6 @@
         "profile",
         "Elements",
         "btnWatchList.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "profile",
-        "Elements",
-        "btnReccomendations.json"
       ]
     },
     {

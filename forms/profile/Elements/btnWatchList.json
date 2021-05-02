@@ -29,7 +29,7 @@
   "icon": "",
   "iconTitle": "",
   "id": "btnWatchList",
-  "left": 66,
+  "left": 65,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -60,7 +60,7 @@
   "size": " btn-md",
   "style": "",
   "toggleControl": "",
-  "top": 313,
+  "top": 331,
   "value": "Browse WatchList",
   "width": 205
 }

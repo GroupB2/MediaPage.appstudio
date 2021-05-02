@@ -25,14 +25,14 @@
   "footer": "",
   "header": "",
   "headerCols": 0,
-  "height": 32,
+  "height": 38,
   "hidden": "",
   "icon": "",
   "iconTitle": "",
   "id": "inptUser",
   "inputType": "text",
   "inputmode": "",
-  "left": 15,
+  "left": "25",
   "leftText": "Username:",
   "mAll": "",
   "mBottom": "",
@@ -84,9 +84,9 @@
   "spellcheck": "true",
   "step": "",
   "style": "",
-  "top": 93,
+  "top": "120",
   "validation": "",
   "value": "",
   "valueCols": 10,
-  "width": 291
+  "width": "220"
 }

@@ -53,12 +53,22 @@ profile.onshow=function(){
             profileDescription = "This user was too lazy to add anything"
             txtaDescriptionProfile.value = profileDescription
         }
-        
+    
+    let originalSourcePic = imgProfilePic.src
+    let fiveDigits = ""
+    
+    for (i = 17; i < 22; i++){
+        fiveDigits = fiveDigits + originalSourcePic[i]
+    }
+    
+    
+    
     let query2 = "SELECT `profile_pic` FROM user WHERE `username` = '" + currentUser + "'"
     console.log(query2)
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
         imageResults = JSON.parse(req.responseText)
-        let profilePic = imageResults[0]
+        let profilePic = imageResults[0][0]
+        let fiveDigits2 = ""
         
         let imageFound = False
         if (profilePic != '' && imageResults.length == 1){
@@ -67,9 +77,26 @@ profile.onshow=function(){
         
         console.log(imageFound)
         if (imageFound == True){
-            profilePicture = profilePic
-            imgProfilePic.src = profilePicture
-            console.log(profilePic)
+            
+            for (i = 17; i < 22; i++){
+                fiveDigits2 = fiveDigits2 + profilePic[i]
+            }
+
+            if (fiveDigits == fiveDigits2){
+                profilePicture = profilePic
+                imgProfilePic.src = profilePicture
+            }
+            else{
+                for (i = 0; i < 16; i++){
+                    profilePicture = profilePicture + profilePic[i]
+                }
+                profilePicture = profilePicture + fiveDigits
+                
+                for (i = 22; i < profilePic.length; i++){
+                    profilePicture = profilePicture + profilePic[i]
+                }
+                imgProfilePic.src = profilePicture
+            }
         }
 
 }
@@ -125,10 +152,6 @@ btnWatchList.onclick=function(){
 
 btnReviews.onclick=function(){
   ChangeForm(PastReviews)
-}
-
-btnReccomendations.onclick=function(){
-  alert("This form is yet to be finished")
 }
 
 btnAddFriend.onclick=function(){

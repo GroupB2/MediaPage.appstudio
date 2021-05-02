@@ -1,6 +1,6 @@
 {
   "!type": "Label_bs4",
-  "appearance": "dark",
+  "appearance": "white",
   "backgroundColor": "",
   "borderRadius": "0",
   "bottom": "auto",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 350,
-  "value": "Want to connect and discuess movies with more people? Try searching for new users to add :)",
+  "top": 345,
+  "value": "Want to connect and discuss movies with more people? Try searching for new users to add :)",
   "width": 270
 }

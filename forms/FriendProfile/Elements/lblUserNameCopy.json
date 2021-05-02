@@ -19,7 +19,7 @@
   "hidden": "",
   "id": "lblUserNameCopy",
   "labelStyle": "text",
-  "left": 82,
+  "left": 81,
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "text-align:center;",
-  "top": 147,
+  "top": 151,
   "value": "",
   "width": 157
 }

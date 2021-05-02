@@ -15,11 +15,11 @@
   "fontSize": "",
   "fontStyle": "",
   "fontWeight": "",
-  "height": 64,
+  "height": "50",
   "hidden": "",
   "id": "lblWelcome",
   "labelStyle": "text",
-  "left": 16,
+  "left": "23",
   "mAll": "",
   "mBottom": "",
   "mLeft": "",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "",
-  "top": 200,
+  "top": "215",
   "value": "Welcome to our App!",
   "width": 136
 }
