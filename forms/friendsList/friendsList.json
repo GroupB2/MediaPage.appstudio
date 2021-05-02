@@ -63,6 +63,24 @@
         "Elements",
         "btnFriends2.json"
       ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "friendsList",
+        "Elements",
+        "lblFriendsList2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "friendsList",
+        "Elements",
+        "Label1.json"
+      ]
     }
   ],
   "class": "",

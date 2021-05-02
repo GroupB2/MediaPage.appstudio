@@ -1,3 +1,5 @@
+//global variables:
+
 btnSearch8.onclick=function() {
   mediaTitle = inptSearch8.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
@@ -16,7 +18,6 @@ btnSearch8.onclick=function() {
         drpRate2.value = results[0]
         drpRate3.value = results[0]
     }
-    
     ChangeForm(Search)
 }
 
@@ -24,8 +25,11 @@ btnSearch8.onclick=function() {
 searchFriend.onshow=function(){
     searchFriend.reset()
     lblFriendResult.value = ""
-    listGFriendSearch.clear()
-
+    imageFriendSearchPic.hidden = True
+    lblFriendUserSearch.hidden = True
+    txtaDescriptionFriendSearch.hidden = True
+    btnADDFriend.hidden = True
+    
     hmbrMenu7.clear()
     hmbrMenu7.addItem("Home")
     hmbrMenu7.addItem("Profile")
@@ -42,16 +46,16 @@ hmbrMenu7.onclick=function(s){
        
     switch(s) {
         case "Home":
-            ChangeForm(home)
+            //ChangeForm(homePage)
             break
         case "Friends":
             ChangeForm(friendsList)
             break
         case "Watchlist":
-            ChangeForm(Watchlist)
+            //ChangeForm(watchList)
             break
         case "Movie Theaters":
-            ChangeForm(Maps)
+            //ChangeForm(movieTheaters)
             break
         case "Profile":
             ChangeForm(profile)
@@ -64,8 +68,7 @@ hmbrMenu7.onclick=function(s){
 
 
 btnSearchFriend.onclick=function(){
-    listGFriendSearch.clear()
-    userNameFriend = inptFriendSearch.value
+    let userNameFriend = inptFriendSearch.value
     
     query = "SELECT `username` FROM user WHERE `username` = '" + userNameFriend + "'"
     console.log(query)
@@ -77,41 +80,87 @@ btnSearchFriend.onclick=function(){
         if (results.length == 0){
             lblFriendResult.value = "Oops, looks like there's no one with that username... make sure you spelled it correctly!"
         } else {
-            lblFriendResult.value = "Click on a user's name to view their profile!"
-            let message = ""
-            for (i = 0; i < results.length; i++)
-                listGFriendSearch.addItem(message + results[i][0] + "\n")
+            lblFriendResult.value = `Click on ${userNameFriend}'s username to view their full profile!`
+            imageFriendSearchPic.hidden = False
+            lblFriendUserSearch.hidden = False
+            txtaDescriptionFriendSearch.hidden = False
+            btnADDFriend.hidden = False
+            
+            query2 = "SELECT `username`, `about`, `profile_pic` FROM user WHERE `username` = '" + userNameFriend + "'"
+            console.log(query2)
+            
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
+            if (req.status == 200){ 
+                let friendInfo = JSON.parse(req.responseText)
+                console.log(friendInfo)
+                
+            for (i = 0; i < friendInfo.length; i++) {
+                lblFriendUserSearch.value = friendInfo[i][0]
+                txtaDescriptionFriendSearch.value = friendInfo[i][1]
+                imageFriendSearchPic.src = friendInfo[i][2]
+            }
+            }
         }
     }
 }
 
 btnCancelSearch.onclick=function(){
-  searchFriend.reset()
-  lblFriendResult.value = ""
-  listGFriendSearch.clear()
+    searchFriend.reset()
+    lblFriendResult.value = ""
+    imageFriendSearchPic.hidden = True
+    lblFriendUserSearch.hidden = True
+    txtaDescriptionFriendSearch.hidden = True
+    btnADDFriend.hidden = True
 }
 
-/*
-btnSearchFriend.onclick=function(){
+lblFriendUserSearch.onclick=function(){
+  ChangeForm(friendsProfile)
+}
+
+btnADDFriend.onclick=function(){
     let userNameFriend = inptFriendSearch.value
     
     //The following code grabs the user's id using the username they used when they first logged in with
-    let query = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-        results = JSON.parse(req.responseText)
-        user_id = results[0]
-    
-    let query2 = "INSERT INTO friend (`friend_id`,`username`,`user_id`) VALUES ('" + user_id + "', '" + userNameFriend + "', '" + user_id + "')"
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query2)
-    if (req.status == 200) { 
-        if (req.responseText == 500){
-            lblMessage2.hidden = False
-            lblMessage2.textContent = "Hooray! You have successfully added a new friend :)"
-        } else {
-            lblMessage2.hidden = False
-            lblMessage2.textContent = "Oops, there was a problem adding the friend... make sure you spelled their username correctly!"
+    let query3 = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query3)
+        userResults = JSON.parse(req.responseText)
+        user_id = userResults[0]
+
+    //The following code grabs the friend's user_id with the name entered in the inpt search bar:
+    let query4 = "SELECT `user_id` FROM user WHERE `username` = '" + userNameFriend + "'"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query4)
+        friendResults = JSON.parse(req.responseText)
+        friend_id = friendResults[0]
+
+    //The following code check's to see if the users are already friend with each other:
+    let query5 = "SELECT `friend_id` FROM friend WHERE `user_id` = '" + user_id + "'"
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query5)
+        friendMatchResults = JSON.parse(req.responseText)
+        
+        let found = False
+        for (i = 0; i < friendMatchResults.length; i++){
+            if (friend_id == friendMatchResults[i][0]){
+                found = True
+                break;
+            } else
+                found = False
         }
-    } else 
-        lblMessage2.textContent = "Error: " + req.status
+        console.log(found)
+        if (found == True)
+            alert("Looks like your already friends with this user! Try searching a different one...")
+        else {
+            //The following code inserts a new friend into the friend table using the friend's id, the user's username, and the user's id:
+            let query6 = "INSERT INTO friend (`friend_id`,`username`,`user_id`) VALUES ('" + friend_id + "', '" + userNameFriend + "', '" + user_id + "')"
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query6)
+            if (req.status == 200) 
+                lblFriendResult.value = `Hooray! You have successfully added ${userNameFriend} as a new friend :)`
+        }
 }
-*/
+
+inptFriendSearch.onchange=function(){
+    lblFriendResult.value = ""
+    imageFriendSearchPic.hidden = True
+    lblFriendUserSearch.hidden = True
+    txtaDescriptionFriendSearch.hidden = True
+    btnADDFriend.hidden = True
+}
