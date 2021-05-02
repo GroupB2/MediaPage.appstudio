@@ -29,6 +29,7 @@ WriteReview.onshow=function(){
     hmbrMenu3.addItem("Friends")
     hmbrMenu3.addItem("Watchlist")
     hmbrMenu3.addItem("Movie Theaters")
+    hmbrMenu3.addItem("Twitter")
     hmbrMenu3.addItem("Log Out")
     drpRate3.clear() 
     for (i = 0; i < ratings.length; i++)
@@ -60,6 +61,9 @@ hmbrMenu3.onclick=function(s) {
             break
         case "Movie Theaters":
             ChangeForm(Maps)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(logOut)

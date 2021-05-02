@@ -32,6 +32,7 @@ friendsList.onshow=function(){
     hmbrMenu5.addItem("Friends")
     hmbrMenu5.addItem("Watchlist")
     hmbrMenu5.addItem("Movie Theaters")
+    hmbrMenu5.addItem("Twitter")
     hmbrMenu5.addItem("Log Out")
 
     //The following code grabs the user's id using the username they used when they first logged in with:
@@ -80,6 +81,9 @@ hmbrMenu5.onclick=function(s){
             break
         case "Profile":
             ChangeForm(profile)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(logOut)

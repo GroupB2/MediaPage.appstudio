@@ -29,6 +29,7 @@ FriendWatchlist.onshow=function(){
     hmbrFriendWatch.addItem("Friends")
     hmbrFriendWatch.addItem("Watchlist")
     hmbrFriendWatch.addItem("Movie Theaters")
+    hmbrFriendWatch.addItem("Twitter")
     hmbrFriendWatch.addItem("Log Out")
     selWatchlistFriend.clear()
     query = `SELECT m.title, m.avg_score FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE u.username = '${userNameFriend}' AND mr.watchlist_status = 'Yes' ORDER BY m.title`
@@ -78,6 +79,9 @@ hmbrFriendWatch.onclick=function(s) {
             break
         case "Movie Theaters":
             ChangeForm(Maps)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(logOut)

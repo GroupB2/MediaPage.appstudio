@@ -34,6 +34,7 @@ searchFriend.onshow=function(){
     hmbrMenu7.addItem("Friends")
     hmbrMenu7.addItem("Watchlist")
     hmbrMenu7.addItem("Movie Theaters")
+    hmbrMenu7.addItem("Twitter")
     hmbrMenu7.addItem("Log Out")
 }
 
@@ -44,19 +45,22 @@ hmbrMenu7.onclick=function(s){
        
     switch(s) {
         case "Home":
-            //ChangeForm(homePage)
+            ChangeForm(home)
             break
         case "Friends":
             ChangeForm(friendsList)
             break
         case "Watchlist":
-            //ChangeForm(watchList)
+            ChangeForm(Watchlist)
             break
         case "Movie Theaters":
-            //ChangeForm(movieTheaters)
+            ChangeForm(Maps)
             break
         case "Profile":
             ChangeForm(profile)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(logOut)

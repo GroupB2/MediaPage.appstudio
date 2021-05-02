@@ -35,6 +35,7 @@ home.onshow=function(){
     hmbrMenuHome.addItem("Friends")
     hmbrMenuHome.addItem("Watchlist")
     hmbrMenuHome.addItem("Movie Theaters")
+    hmbrMenuHome.addItem("Twitter")
     hmbrMenuHome.addItem("Log Out")
     
     imgOurRec1.src = 'http://127.0.0.1:59235/MediaPage/'
@@ -185,6 +186,16 @@ hmbrMenuHome.onclick=function(s) {
             break
         case "Movie Theaters":
             ChangeForm(Maps)
+            imgOurRec1.src = 'http://127.0.0.1:59235/MediaPage/'
+            imgOurRec2.src = 'http://127.0.0.1:59235/MediaPage/'
+            imgOurRec3.src = 'http://127.0.0.1:59235/MediaPage/'
+            
+            imgYourRec1.src = 'http://127.0.0.1:59235/MediaPage/'
+            imgYourRec2.src = 'http://127.0.0.1:59235/MediaPage/'
+            imgYourRec3.src = 'http://127.0.0.1:59235/MediaPage/'
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             imgOurRec1.src = 'http://127.0.0.1:59235/MediaPage/'
             imgOurRec2.src = 'http://127.0.0.1:59235/MediaPage/'
             imgOurRec3.src = 'http://127.0.0.1:59235/MediaPage/'

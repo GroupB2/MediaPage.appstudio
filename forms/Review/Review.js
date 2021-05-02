@@ -30,6 +30,7 @@ Review.onshow=function(){
     hmbrMenu2.addItem("Friends")
     hmbrMenu2.addItem("Watchlist")
     hmbrMenu2.addItem("Movie Theaters")
+    hmbrMenu2.addItem("Twitter")
     hmbrMenu2.addItem("Log Out")
     drpRate2.clear() 
     btnSubmit.value = 'Search'
@@ -67,6 +68,9 @@ hmbrMenu2.onclick=function(s) {
             break
         case "Movie Theaters":
             ChangeForm(Maps)
+            break
+        case "Twitter":
+            ChangeForm(twitter)
             break
         case "Log Out":
             ChangeForm(logOut)
