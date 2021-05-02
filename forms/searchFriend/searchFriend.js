@@ -96,8 +96,17 @@ btnSearchFriend.onclick=function(){
                 
             for (i = 0; i < friendInfo.length; i++) {
                 lblFriendUserSearch.value = friendInfo[i][0]
+                
+                if (friendInfo[i][1])
                 txtaDescriptionFriendSearch.value = friendInfo[i][1]
+                else
+                txtaDescriptionFriendSearch.value = "This user was too lazy to add anything"
+                
+                
+                if (friendInfo[i][2]){
                 imageFriendSearchPic.src = friendInfo[i][2]
+                console.log(friendInfo[i][2])
+                }
             }
             }
         }
@@ -114,7 +123,7 @@ btnCancelSearch.onclick=function(){
 }
 
 lblFriendUserSearch.onclick=function(){
-  ChangeForm(friendsProfile)
+  ChangeForm(FriendProfile)
 }
 
 btnADDFriend.onclick=function(){

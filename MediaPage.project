@@ -135,8 +135,16 @@
           "!type": "External",
           "file": [
             "forms",
-            "friendsProfile",
-            "friendsProfile.json"
+            "Form1",
+            "Form1.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendProfile",
+            "FriendProfile.json"
           ]
         }
       ],
