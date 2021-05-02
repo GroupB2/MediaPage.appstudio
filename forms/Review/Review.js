@@ -174,7 +174,7 @@ else {
     if (selectedReview == '')
         txtaReview.value = 'You have not selected a user review to view.'
     else {
-        txtaReview.value = `${usernameReview}'s Review:\n${selectedReview}`
+        txtaReview.value = `${usernameReview.trim()}'s Review:\n${selectedReview}`
         userNameFriend = usernameReview
     }
   }

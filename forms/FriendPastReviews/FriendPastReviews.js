@@ -20,7 +20,7 @@ btnSearch21.onclick=function() {
 }
 
 FriendPastReviews.onshow=function(){
-    lblPastReviews2.value = `${userNameFriend}'s Past Reviews`
+    lblPastReviews2.value = `${userNameFriend.trim()}'s Past Reviews`
     hmbrMenu21.clear()    // clear out choices before adding ones you want
     hmbrMenu21.addItem("Home")
     hmbrMenu21.addItem("Profile")
@@ -133,9 +133,9 @@ else {
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
     if (results[0] != '' && results.length == 1)
-        rating = `${userNameFriend} rated "${newMediaReview}" a ${results[0]}/10.00 and left`
+        rating = `${userNameFriend.trim()} rated "${newMediaReview}" a ${results[0]}/10.00 and left`
     else
-        rating = `${userNameFriend} hasn't rated "${newMediaReview}" yet, but did leave`
+        rating = `${userNameFriend.trim()} hasn't rated "${newMediaReview}" yet, but did leave`
     if (selectedReview == '')
         txtaPastReview2.value = "You have not selected one of your friend's past reviews to view."
     else {
