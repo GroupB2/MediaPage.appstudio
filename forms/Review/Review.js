@@ -69,20 +69,7 @@ hmbrMenu2.onclick=function(s) {
             ChangeForm(Maps)
             break
         case "Log Out":
-            ChangeForm(loginPage)
-            query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            if (req.status == 200) {
-                const userLogout = () => {
-                    auth.signOut()
-                        .then(function() {
-                            lblResult2.value("You have logged out!")
-                        })
-                        .catch(function(error) {
-                            lblError.value = "Error -- could not log out!"
-                        });
-                }
-            }
+            ChangeForm(logOut)
             break
     }
 }
@@ -187,7 +174,7 @@ else {
     if (selectedReview == '')
         txtaReview.value = 'You have not selected a user review to view.'
     else {
-        txtaReview.value = `${usernameReview.trim()}'s Review:\n${selectedReview}`
+        txtaReview.value = `${usernameReview}'s Review:\n${selectedReview}`
         userNameFriend = usernameReview
     }
   }
