@@ -163,7 +163,7 @@ inptWatchlistMedia.onclick=function(){
   btnRemove.hidden = True
 }
 
-lblReset2.onclick=function(){
+btnReset2.onclick=function(){
     selWatchlist.clear()
     query = `SELECT m.title, m.avg_score FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE u.username = '${currentUser}' AND mr.watchlist_status = 'Yes' ORDER BY m.title`
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
@@ -172,4 +172,5 @@ lblReset2.onclick=function(){
         item = results[i][0] + ' | Score: ' + results[i][1]
         selWatchlist.addItem(item)
     }
+    btnSubmit3.value = 'Search List'
 }

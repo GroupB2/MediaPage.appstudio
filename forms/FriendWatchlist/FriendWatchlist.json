@@ -1,0 +1,119 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "",
+  "borderColor": "",
+  "borderStyle": "",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "lblFriendWatchTitle.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "hmbrFriendWatch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "inptSearch4Copy.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "btnSearchFriendWatch.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "btnSubmitFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "selWatchlistFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "inptWatchlistMediaFriend.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "btnAddList.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "FriendWatchlist",
+        "Elements",
+        "btnResetFriendWatch.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 0,
+  "designWidth": 0,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 460,
+  "id": "FriendWatchlist",
+  "language": "JavaScript",
+  "left": "0",
+  "locked": false,
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": "0",
+  "width": 320
+}

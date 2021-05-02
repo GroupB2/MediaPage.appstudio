@@ -115,15 +115,6 @@
         "forms",
         "profile",
         "Elements",
-        "btnAddReview.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "profile",
-        "Elements",
         "btnAddFriend.json"
       ]
     },

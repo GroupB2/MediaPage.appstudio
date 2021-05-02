@@ -119,11 +119,10 @@ drpRate3.onclick=function(s){
    }
 }
 
-lblTitle3.onclick=function(){
+btnTitle3.onclick=function(){
   ChangeForm(Search)
 }
-
-lblReadReviews.onclick=function(){
+btnReadReviews.onclick=function(){
   ChangeForm(Review)
 }
 
