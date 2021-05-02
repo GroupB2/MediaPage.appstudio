@@ -53,9 +53,8 @@ friendsList.onshow=function(){
             lblFriendsList.hidden = False
             lblFriendsList.textContent = "Looks like you don't have any friends at the moment."
         } else { 
-            let message = ""
             for (i = 0; i < results.length; i++)
-                listGroupFriends.addItem(message + results[i][0] + "\n")
+                listGroupFriends.addItem(results[i][0])
                 
         }
     }
@@ -83,7 +82,20 @@ hmbrMenu5.onclick=function(s){
             ChangeForm(profile)
             break
         case "Log Out":
-            ChangeForm(logOut)
+            ChangeForm(loginPage)
+            query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+            if (req.status == 200) {
+                const userLogout = () => {
+                    auth.signOut()
+                        .then(function() {
+                            lblResult2.value("You have logged out!")
+                        })
+                        .catch(function(error) {
+                            lblError.value = "Error -- could not log out!"
+                        });
+                }
+            }
             break
         }
 }
@@ -93,5 +105,4 @@ btnFriends2.onclick=function(){
 }
 
 listGroupFriends.onclick=function(){
-  
 }
