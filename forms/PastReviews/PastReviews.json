@@ -79,15 +79,6 @@
         "forms",
         "PastReviews",
         "Elements",
-        "lblReset3.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "PastReviews",
-        "Elements",
         "txtaPastReview.json"
       ]
     },
@@ -98,6 +89,15 @@
         "PastReviews",
         "Elements",
         "selReviews.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "PastReviews",
+        "Elements",
+        "btnReset3.json"
       ]
     }
   ],

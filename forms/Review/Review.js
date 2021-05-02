@@ -126,7 +126,7 @@ drpRate2.onclick=function(s){
    }
 }
 
-lblTitle2.onclick=function(){
+btnTitle2.onclick=function(){
   ChangeForm(Search)
 }
 
@@ -181,7 +181,7 @@ else {
     
 }
 
-lblWriteReview.onclick=function(){
+btnWriteReview.onclick=function(){
   ChangeForm(WriteReview)
 }
 
@@ -189,7 +189,7 @@ selNames.onclick=function(){
    btnSubmit.value = 'Submit'
 }
 
-lblReset.onclick=function(){
+btnReset.onclick=function(){
     selNames.clear()
     selNames.hidden = False
     txtaReview.hidden = True

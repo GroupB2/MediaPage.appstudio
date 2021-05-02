@@ -35,7 +35,7 @@
   "mLeft": "",
   "mRight": "",
   "mTop": "",
-  "onclick": "",
+  "onclick": "btnReviewsFriend.onclick()",
   "onmousedown": "",
   "onmousemove": "",
   "onmouseout": "",

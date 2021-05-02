@@ -37,9 +37,8 @@ hmbrMenu31.onclick=function(s){
 
 btnLogout.onclick = function() {
     ChangeForm(loginPage)
-    req = ""
     query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
-    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + username + "&pass=" + password + "&database=375groupb2&query=" + query)
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     if (req.status == 200) {
         const userLogout = () => {
             auth.signOut()

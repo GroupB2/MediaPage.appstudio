@@ -12,10 +12,10 @@
   "display": "",
   "expanded_pmp": null,
   "fontFamily": "",
-  "fontSize": "24",
+  "fontSize": "20",
   "fontStyle": "",
   "fontWeight": "",
-  "height": 43,
+  "height": 42,
   "hidden": "",
   "id": "lblTitle4",
   "labelStyle": "text",
@@ -42,7 +42,7 @@
   "right": "auto",
   "script": "",
   "style": "text-align:center;",
-  "top": "55",
+  "top": 52,
   "value": "My Watchlist",
   "width": 296
 }

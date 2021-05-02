@@ -151,7 +151,7 @@ btnWatchListFriend.onclick=function(){
 }
 
 btnReviewsFriend.onclick=function(){
-  alert("This form is yet to be finished")
+  ChangeForm(FriendPastReviews)
 }
 
 

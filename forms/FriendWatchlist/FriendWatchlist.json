@@ -79,7 +79,7 @@
         "forms",
         "FriendWatchlist",
         "Elements",
-        "lblResetFriendWatch.json"
+        "btnAddList.json"
       ]
     },
     {
@@ -88,7 +88,7 @@
         "forms",
         "FriendWatchlist",
         "Elements",
-        "btnAddList.json"
+        "btnResetFriendWatch.json"
       ]
     }
   ],

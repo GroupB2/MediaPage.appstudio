@@ -154,6 +154,14 @@
             "FriendWatchlist",
             "FriendWatchlist.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "FriendPastReviews",
+            "FriendPastReviews.json"
+          ]
         }
       ],
       "configxml": null,

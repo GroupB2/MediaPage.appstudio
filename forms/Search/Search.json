@@ -88,7 +88,7 @@
         "forms",
         "Search",
         "Elements",
-        "lblReview.json"
+        "drpRate.json"
       ]
     },
     {
@@ -97,7 +97,7 @@
         "forms",
         "Search",
         "Elements",
-        "drpRate.json"
+        "btnReview.json"
       ]
     }
   ],

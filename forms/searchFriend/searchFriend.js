@@ -42,16 +42,16 @@ hmbrMenu7.onclick=function(s){
        
     switch(s) {
         case "Home":
-            //ChangeForm(homePage)
+            ChangeForm(home)
             break
         case "Friends":
             ChangeForm(friendsList)
             break
         case "Watchlist":
-            //ChangeForm(watchList)
+            ChangeForm(Watchlist)
             break
         case "Movie Theaters":
-            //ChangeForm(movieTheaters)
+            ChangeForm(Maps)
             break
         case "Profile":
             ChangeForm(profile)

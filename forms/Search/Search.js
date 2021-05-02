@@ -9,17 +9,25 @@ let season = ''
 let ratings = [10, 9.5, 9.0, 8.5, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5, 5.0, 4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, 0]
 let currentUser = ''
 let userNameFriend = ''
+let homeMedia1 = ''
+let homeMedia2 = ''
+let homeMedia3 = ''
+let homeMedia4 = ''
+let homeMedia5 = ''
+let homeMedia6 = ''
 
 function onXHRLoad() {
     let message = ""
     let apiData = JSON.parse(this.responseText)
     
     lblTitle.value = "Error: Movie doesn't exist."
+    btnTitle2.value = "Error: Movie doesn't exist."
+    btnTitle3.value = "Error: Movie doesn't exist."
 
     mediaTitle = apiData.Title
     lblTitle.value = apiData.Title
-    lblTitle2.value = apiData.Title
-    lblTitle3.value = apiData.Title
+    btnTitle2.value = apiData.Title
+    btnTitle3.value = apiData.Title
     lblRating.value = "Popcorn Score: " + apiData.imdbRating
     
     message = message + "Release Date: "+ apiData.Released + "\n"
@@ -257,7 +265,7 @@ drpRate.onclick=function(s){
    }
 }
 
-lblReview.onclick=function(){
+btnReview.onclick=function(){
   ChangeForm(Review)
 }
 

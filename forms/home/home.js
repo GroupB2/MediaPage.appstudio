@@ -1,10 +1,3 @@
-let homeMedia1 = ''
-let homeMedia2 = ''
-let homeMedia3 = ''
-let homeMedia4 = ''
-let homeMedia5 = ''
-let homeMedia6 = ''
-
 btnSearchHome.onclick=function() {
   mediaTitle = inptSearchHome.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
@@ -44,6 +37,14 @@ home.onshow=function(){
     hmbrMenuHome.addItem("Movie Theaters")
     hmbrMenuHome.addItem("Log Out")
     
+    imgOurRec1.src = 'http://127.0.0.1:59235/MediaPage/'
+    imgOurRec2.src = 'http://127.0.0.1:59235/MediaPage/'
+    imgOurRec3.src = 'http://127.0.0.1:59235/MediaPage/'
+            
+    imgYourRec1.src = 'http://127.0.0.1:59235/MediaPage/'
+    imgYourRec2.src = 'http://127.0.0.1:59235/MediaPage/'
+    imgYourRec3.src = 'http://127.0.0.1:59235/MediaPage/'
+    
     query = `SELECT title FROM media WHERE status_id = 1`
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
@@ -70,7 +71,7 @@ home.onshow=function(){
     results = JSON.parse(req.responseText)
     randomMedia = results[0]
     
-    lblRecommendation.value = `Since you viewed '${randomMedia}'`
+    lblRecommendation.value = `Since you viewed "${randomMedia}"`
     
     query = `SELECT genre FROM media WHERE title = '${results[0]}'`
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
@@ -193,7 +194,7 @@ hmbrMenuHome.onclick=function(s) {
             imgYourRec3.src = 'http://127.0.0.1:59235/MediaPage/'
             break
         case "Log Out":
-            ChangeForm(logOut)
+            ChangeForm(loginPage)
             imgOurRec1.src = 'http://127.0.0.1:59235/MediaPage/'
             imgOurRec2.src = 'http://127.0.0.1:59235/MediaPage/'
             imgOurRec3.src = 'http://127.0.0.1:59235/MediaPage/'
@@ -201,13 +202,27 @@ hmbrMenuHome.onclick=function(s) {
             imgYourRec1.src = 'http://127.0.0.1:59235/MediaPage/'
             imgYourRec2.src = 'http://127.0.0.1:59235/MediaPage/'
             imgYourRec3.src = 'http://127.0.0.1:59235/MediaPage/'
+            
+            query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
+            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+            if (req.status == 200) {
+                const userLogout = () => {
+                    auth.signOut()
+                        .then(function() {
+                            lblResult2.value("You have logged out!")
+                        })
+                        .catch(function(error) {
+                            lblError.value = "Error -- could not log out!"
+                        });
+                }
+            }
             break
     }
 }
 
 function onXHRLoad2() {
     let apiData = JSON.parse(this.responseText)
-    
+   
     if (imgOurRec1.src == 'http://127.0.0.1:59235/MediaPage/') {
         imgOurRec1.src = apiData.Poster
         homeMedia1 = apiData.Title
