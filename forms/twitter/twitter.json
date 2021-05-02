@@ -14,45 +14,54 @@
       "!type": "External",
       "file": [
         "forms",
-        "Maps",
+        "twitter",
         "Elements",
-        "hmbrMenuMaps.json"
+        "Twitter1.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Maps",
+        "twitter",
         "Elements",
-        "inptSearch5.json"
+        "lblTwitter.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Maps",
+        "twitter",
         "Elements",
-        "btnSearch5.json"
+        "HTMLview1.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Maps",
+        "twitter",
         "Elements",
-        "btnCL4.json"
+        "inptSearch90.json"
       ]
     },
     {
       "!type": "External",
       "file": [
         "forms",
-        "Maps",
+        "twitter",
         "Elements",
-        "HTMLview12.json"
+        "btnSearch90.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "twitter",
+        "Elements",
+        "hmbrMenu9.json"
       ]
     }
   ],
@@ -62,7 +71,7 @@
   "expanded_pmp": null,
   "fullScreen": "true",
   "height": 460,
-  "id": "Maps",
+  "id": "twitter",
   "language": "JavaScript",
   "left": "0",
   "locked": false,
@@ -70,7 +79,7 @@
   "onhide": "",
   "onkeypress": "",
   "onresize": "",
-  "onshow": "",
+  "onshow": "twitter.onshow()",
   "openMode": "none",
   "parentForm": "",
   "position": "absolute",
