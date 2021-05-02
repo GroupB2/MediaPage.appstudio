@@ -1,8 +1,16 @@
+   // query to found FirstName
+    let NameQuery = "SELECT `first_name` FROM user WHERE `username` = '" + userNameFriend + "'"
+    console.log(NameQuery)
+    req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + NameQuery)
+        resultsName = JSON.parse(req1.responseText)
+        let FriendName = resultsName[0]
+        console.log(FriendName)
+        
 btnSearchFriendWatch.onclick=function() {
-  mediaTitle = inptSearch4Copy.value
+  mediaTitle = inptSearch4.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
   callAPI(requestURL)
-  inptSearch4Copy.value = ''
+  inptSearch4.value = ''
   
   drpRate.value = 'Rate'
   drpRate2.value = 'Rate'
@@ -39,11 +47,7 @@ FriendWatchlist.onshow=function(){
         selWatchlistFriend.addItem(item)
     }
     
-        let NameQuery = "SELECT `first_name` FROM user WHERE `username` = '" + userNameFriend + "'"
-        req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + NameQuery)
-        resultsName = JSON.parse(req1.responseText)
-        let FriendName = resultsName[0]
-
+  
     
         let foundName = False
         if (FriendName != '' && resultsName.length == 1)
@@ -80,85 +84,44 @@ hmbrFriendWatch.onclick=function(s) {
             ChangeForm(Maps)
             break
         case "Log Out":
-            ChangeForm(loginPage)
-            query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            if (req.status == 200) {
-                const userLogout = () => {
-                    auth.signOut()
-                        .then(function() {
-                            lblResult2.value("You have logged out!")
-                        })
-                        .catch(function(error) {
-                            lblError.value = "Error -- could not log out!"
-                        });
-                }
-            }
+            ChangeForm(logOut)
             break
     }
 }
-
+/*
 btnAddList.onclick=function(){
-    if (selWatchlistFriend.text != `This movie is not in ${userNameFriend}'s watchlist.`) {
-        
-        query = `SELECT mr.user_id, mr.media_id FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${currentUser}' `
+    if (selWatchlistFriend.text != 'This movie is not in this watchlist.') {
+        query = `SELECT user_id FROM user WHERE username = '${currentUser}'`
         req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
-        if (results.length == 0) {
         
-            query = `SELECT user_id FROM user WHERE username = '${currentUser}'`
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            results = JSON.parse(req.responseText)
-        
-            user_id = results[0]
+        user_id = results[0]
     
-            let placeholder = selWatchlistFriend.text
-            let watchlistMedia = ''
-            for (i = 0; placeholder[i] + placeholder[i+1] != ' |'; i ++) {
-                watchlistMedia = watchlistMedia + placeholder[i]
-            }
-            mediaTitle = watchlistMedia
-        
-            query = `SELECT media_id FROM media WHERE title = '${mediaTitle}'`
-            console.log(query)
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            results = JSON.parse(req.responseText)
-        
-            media_id = results[0]   
-            
-            query = `INSERT INTO media_rating (user_id, media_id, watchlist_status) VALUES (${user_id}, ${media_id}, 'Yes')`
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+        let placeholder = selWatchlistFriend.text
+        let watchlistMedia = ''
+        for (i = 0; placeholder[i] + placeholder[i+1] != ' |'; i ++) {
+            watchlistMedia = watchlistMedia + placeholder[i]
         }
+        mediaTitle = watchlistMedia
         
-        else {
-            query = `SELECT user_id FROM user WHERE username = '${currentUser}'`
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            results = JSON.parse(req.responseText)
+        query = `SELECT media_id FROM media WHERE title = '${mediaTitle}'`
+        console.log(query)
+        req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+        results = JSON.parse(req.responseText)
         
-            user_id = results[0]
+        media_id = results[0]   
+        
+        query = `INSERT INTO media_rating (user_id, media_id, watchlist_status) VALUES (${user_id}, ${media_id}, "Yes")`
+        req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
+        
+        query = `UPDATE media_rating SET watchlist_status = 'Yes' WHERE user_id = ${user_id} AND media_id = ${media_id}`
+        req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     
-            let placeholder = selWatchlistFriend.text
-            let watchlistMedia = ''
-            for (i = 0; placeholder[i] + placeholder[i+1] != ' |'; i ++) {
-                watchlistMedia = watchlistMedia + placeholder[i]
-            }
-            mediaTitle = watchlistMedia
-        
-            query = `SELECT media_id FROM media WHERE title = '${mediaTitle}'`
-            console.log(query)
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            results = JSON.parse(req.responseText)
-        
-            media_id = results[0] 
-            
-            query = `UPDATE media_rating SET watchlist_status = 'Yes' WHERE user_id = ${user_id} AND media_id = ${media_id}`
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-        }
-        
-        btnAddList.hidden = True
-        selWatchlistFriend.clear()
+    //    btnAddList.hidden = True
+      //  selWatchlistFriend.clear()
     
-        query = `SELECT m.title, m.avg_score FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE u.username = '${userNameFriend}' AND mr.watchlist_status = 'Yes' ORDER BY m.title`
+        query = `SELECT m.title, m.avg_score FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE u.username = '${currentUser}' AND mr.watchlist_status = 'Yes' ORDER BY m.title`
+        console.log(query)
         req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
         for (i = 0; i < results.length; i++) {
@@ -167,7 +130,7 @@ btnAddList.onclick=function(){
         }
     }
 }
-
+*/
 btnSubmitFriend.onclick=function(){
     if (inptWatchlistMediaFriend.value != '') {
         selWatchlistFriend.clear()
@@ -177,7 +140,7 @@ btnSubmitFriend.onclick=function(){
         results = JSON.parse(req.responseText)
         console.log(results)
         if(results[0] != '' && results.length == 0) {
-            item = `This movie is not in ${userNameFriend}'s watchlist.`
+            item = `This movie is not in ${FriendName}'s watchlist.`
             selWatchlistFriend.addItem(item)
         }
         else {
@@ -188,7 +151,7 @@ btnSubmitFriend.onclick=function(){
     }
     else {
         btnSubmitFriend.value = 'Search List'
-        if (selWatchlistFriend.text != `This movie is not in ${userNameFriend}'s watchlist.`) {
+        if (selWatchlistFriend.text != `This movie is not in ${FriendName}'s watchlist.`) {
             let placeholder = selWatchlistFriend.text
             let watchlistMedia = ''
             for (i = 0; placeholder[i] + placeholder[i+1] != ' |'; i ++) {
@@ -216,7 +179,7 @@ btnSubmitFriend.onclick=function(){
 }
 
 selWatchlistFriend.onclick=function(){
-    if (selWatchlistFriend.text != `This movie is not in ${userNameFriend}'s watchlist.`) {
+    if (selWatchlistFriend.text != `This movie is not in ${FriendName}'s watchlist.`) {
         btnSubmitFriend.value = 'Go to Page'
         btnAddList.hidden = False
     }
@@ -227,7 +190,7 @@ inptWatchlistMediaFriend.onclick=function(){
   btnAddList.hidden = True
 }
 
-btnResetFriendWatch.onclick=function(){
+lblResetFriendWatch.onclick=function(){
     selWatchlistFriend.clear()
     query = `SELECT m.title, m.avg_score FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE u.username = '${userNameFriend}' AND mr.watchlist_status = 'Yes' ORDER BY m.title`
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)

@@ -10,7 +10,7 @@ btnSearchFriendProfile.onclick=function() {
   drpRate2.value = 'Rate'
   drpRate3.value = 'Rate'
   
-    query = `SELECT rating FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${userNameFriend}' `
+    query = `SELECT rating FROM user u INNER JOIN media_rating mr ON u.user_id = mr.user_id INNER JOIN media m ON mr.media_id = m.media_id WHERE m.title = '${mediaTitle}' AND u.username = '${currentUser}' `
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
     results = JSON.parse(req.responseText)
     if (results[0] != '' && results.length == 1) {
@@ -24,7 +24,8 @@ btnSearchFriendProfile.onclick=function() {
 
 //Displays user's profile page:
 FriendProfile.onshow=function(){
-  //To Try
+  //To try
+ // let currentUser="maireni"
 
 
     hmbrMenuFriendProfile.clear()
@@ -40,9 +41,11 @@ FriendProfile.onshow=function(){
     //found profile about
 
     let query = "SELECT `about` FROM user WHERE `username` = '" + userNameFriend + "'"
+    console.log(query)
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
         let FriendProfileAbout = results[0]
+        console.log(FriendProfileAbout)
         
         let found = False
         if (FriendProfileAbout != '' && results.length == 1)
@@ -50,17 +53,43 @@ FriendProfile.onshow=function(){
         
         if (found == True){
             FriendProfileDescription = FriendProfileAbout
+            console.log(profileDescription)
             txtaDescriptionProfileFriend.value = FriendProfileDescription
         } else {
             FriendProfileDescription = "This user was too lazy to add anything"
             txtaDescriptionProfileFriend.value = FriendProfileDescription
         }
+    console.log(txtaDescriptionProfileFriend.value)
 
+
+
+//found profile picture
+
+    let queryPic = "SELECT `profile_pic` FROM user WHERE `username` = '" + userNameFriend + "'"
+    console.log(queryPic)
+    req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + queryPic)
+        results = JSON.parse(req.responseText)
+        let FriendProfilePic = results[0]
+        console.log(FriendProfilePic)
+        
+        let foundPic = False
+        if (FriendProfilePic != '' && results.length == 1)
+            found = True
+        
+        if (found == True){
+            FriendProfilePicture = FriendProfilePic
+            console.log(FriendProfilePicture)
+            FriendProfilePicture.src = FriendProfileDescription
+        } 
+        
+    console.log(txtaDescriptionProfileFriend.value)
     // query to found FirstName
     let NameQuery = "SELECT `first_name` FROM user WHERE `username` = '" + userNameFriend + "'"
+    console.log(NameQuery)
     req1 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + NameQuery)
         resultsName = JSON.parse(req1.responseText)
         let FriendName = resultsName[0]
+        console.log(FriendName)
     
         let foundName = False
         if (FriendName != '' && resultsName.length == 1)
@@ -68,14 +97,17 @@ FriendProfile.onshow=function(){
         
         if (foundName == True){
             FriendFirstName = FriendName
+            console.log(FriendFirstName)
             LblReviewsFriend.value= (`${FriendFirstName}'s Reviews`)
             lblWatchListFriend.value= (`${FriendFirstName}'s Watchlist`)
             
             //query found last Name
              let LastNameQuery = "SELECT `last_name` FROM user WHERE `username` = '" + userNameFriend + "'"
+              console.log(LastNameQuery)
               req2 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + LastNameQuery)
               resultsLastName = JSON.parse(req2.responseText)
               let FriendLastName = resultsLastName[0]
+              console.log(FriendLastName)
   
                 let foundLastName = False
                 if (FriendLastName != '' && resultsLastName.length == 1)
@@ -83,6 +115,7 @@ FriendProfile.onshow=function(){
                 
                 if (foundLastName == True){
                     FriendLN = FriendLastName
+                    console.log(FriendLN)
                     FriendProfileName= (FriendFirstName + ' '+ FriendLN)
                     lblFriendName.textContent = FriendProfileName
                 } else {
@@ -95,17 +128,22 @@ FriendProfile.onshow=function(){
             lblFriendName.textContent = FriendProfileName
         }
     
+    console.log(lblFriendName.textContent )
+    
     //The following code grabs the user's id using the username they used when they first logged in with
     let query5 = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
     req5 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query5)
         results5 = JSON.parse(req5.responseText)
         CurrentUser_id = results5[0]
+        console.log(CurrentUser_id)
     
     //Change Value of button to remove or add friend 
      let queryFriend = "SELECT `friend_id` FROM friend WHERE `username` = '" + userNameFriend + "' and `user_id` = '" + CurrentUser_id + "'"
+    console.log(queryFriend)
     req4 = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + queryFriend)
         results4 = JSON.parse(req4.responseText)
         let FriendsFriends = results4.length
+        console.log(FriendsFriends)
        
         if (FriendsFriends==0){
         btnAddRemFriend.value = "Add Friend"
@@ -138,20 +176,7 @@ hmbrMenuFriendProfile.onclick=function(s){
             ChangeForm(profile)
             break
         case "Log Out":
-            ChangeForm(loginPage)
-            query = "SELECT username AND password FROM user WHERE username = ${`username`} AND password = ${`password`}"
-            req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
-            if (req.status == 200) {
-                const userLogout = () => {
-                    auth.signOut()
-                        .then(function() {
-                            lblResult2.value("You have logged out!")
-                        })
-                        .catch(function(error) {
-                            lblError.value = "Error -- could not log out!"
-                        });
-                }
-            }
+            ChangeForm(logOut)
             break
         }
 }
@@ -164,12 +189,13 @@ btnWatchListFriend.onclick=function(){
 }
 
 btnReviewsFriend.onclick=function(){
-  ChangeForm(FriendPastReviews)
+  alert("This form is yet to be finished")
 }
 
 
 btnAddRemFriend.onclick=function(){
   //To try
+ // let currentUser="maireni"
   ProfileName = lblFriendName.textContent
   //The following code grabs the user's id using the username they used when they first logged in with
           let query = "SELECT `user_id` FROM user WHERE `username` = '" + currentUser + "'"
@@ -191,10 +217,10 @@ btnAddRemFriend.onclick=function(){
           if (reqRem.status == 200) { 
               if (reqRem.responseText == 500){
                   lblAddFriend.hidden = False
-                  lblAddFriend.textContent = `You have successfully removed ${ProfileName} as a friend`
+                  lblAddFriend.textContent = `You have successfully remove ${ProfileName} as a friend`
               } else {
                   lblAddFriend.hidden = False
-                  lblAddFriend.textContent = `Oops, there was a problem removing ${ProfileName} as a friend...`
+                  lblAddFriend.textContent = `Oops, there was a problem remoing ${ProfileName} as a friend...`
               }
           } else 
               lblAddFriend.textContent = "Error: " + req.status
@@ -212,12 +238,8 @@ btnAddRemFriend.onclick=function(){
                   lblAddFriend.hidden = False
                   lblAddFriend.textContent = "Oops, there was a problem adding the friend... "
               }
-          } else 
+            } else 
               lblAddFriend.textContent = "Error: " + req.status
-        btnAddRemFriend.value = "Remove Friend"
     }
-  
+  btnAddRemFriend.value = "Remove Friend"
 }
-
-
-
