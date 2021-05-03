@@ -176,6 +176,6 @@ btnGoToReview2.onclick=function(){
         newMediaReview = newMediaReview + mediaReview[i]
     }
     mediaTitle = newMediaReview
-    callAPI(requestURL)
+    requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
     ChangeForm(Review)
 }
