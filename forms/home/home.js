@@ -116,7 +116,6 @@ home.onshow=function(){
                 newGenresSet.add(genres[Math.floor(Math.random() * genres.length)])
             }
             newGenresArray = Array.from(newGenresSet)
-            console.log(newGenresArray)
             query = ''
             fakeQuery = `SELECT title FROM media WHERE title != '${randomMedia}' AND`
             for (i = 0; i < newGenresArray.length; i++) {
@@ -126,10 +125,8 @@ home.onshow=function(){
                 query = query + fakeQuery[i]
             }
             query = query + `ORDER BY vote_count DESC LIMIT 3`
-            console.log(query)
             req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
             results = JSON.parse(req.responseText)
-            console.log(results)
         }
         for (i = 0; i < 3; i++) {
             mediaTitle = results[i]
