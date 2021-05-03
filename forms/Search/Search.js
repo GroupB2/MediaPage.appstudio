@@ -16,7 +16,7 @@ let homeMedia4 = ''
 let homeMedia5 = ''
 let homeMedia6 = ''
 
-function onXHRLoad1() {
+function onXHRLoad() {
     let message = ""
     let apiData = JSON.parse(this.responseText)
     
@@ -87,7 +87,7 @@ function onXHRLoad1() {
     }
 }
 
-function callAPI1(requestURL) {
+function callAPI(requestURL) {
     var xhttp = new XMLHttpRequest();
 
     xhttp.open('GET', 'https://cors.bridged.cc/' + requestURL)
@@ -96,7 +96,7 @@ function callAPI1(requestURL) {
     // if you need to set the returned data type, use this line of code: 
     //xhttp.setRequestHeader('Content-Type', 'application/json')
     
-    xhttp.addEventListener('load', onXHRLoad1)
+    xhttp.addEventListener('load', onXHRLoad)
     xhttp.send()
     
 }
@@ -115,7 +115,7 @@ function totalScore(mediaTitle) {
 btnSearch.onclick=function() {
   mediaTitle = inptSearch.value
   requestURL = "http://www.omdbapi.com/?t=" + mediaTitle + "&apikey=2c27ce9a"
-  callAPI1(requestURL)
+  callAPI(requestURL)
   inptSearch.value = ''
   drpRate.value = 'Rate'
   drpRate2.value = 'Rate'
@@ -147,7 +147,7 @@ btnSearch.onclick=function() {
 }
 
 Search.onshow=function(){
-    callAPI1(requestURL)
+    callAPI(requestURL)
     hmbrMenu.clear()    // clear out choices before adding ones you want
     hmbrMenu.addItem("Home")
     hmbrMenu.addItem("Profile")
