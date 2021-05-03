@@ -289,5 +289,8 @@ btnWatchlist2.onclick=function(){
 }
 
 btnReviewerProfile.onclick=function(){
-    ChangeForm(FriendProfile)
+    if (userNameFriend.trim() == currentUser.trim())
+        ChangeForm(profile)
+    else
+        ChangeForm(FriendProfile)
 }

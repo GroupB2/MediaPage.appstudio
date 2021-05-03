@@ -37,7 +37,6 @@ profile.onshow=function(){
     lblUserName.textContent = currentUser
     
     let query = "SELECT `about` FROM user WHERE `username` = '" + currentUser + "'"
-    console.log(query)
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=" + netID + "&pass=" + pw + "&database=375groupb2&query=" + query)
         results = JSON.parse(req.responseText)
         let profileAbout = results[0]

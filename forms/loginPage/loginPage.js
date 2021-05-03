@@ -11,11 +11,9 @@ btnLogin.onclick = function() {
         found = True
         
     if (found == True){
-        console.log(`Welcome ${currentUser}!`)
         ChangeForm(home)
     } 
     else {
-        console.log("Oops, something went wrong... make sure your username and/or password is correct!")
         currentUser = ''
     }
     inptUser.value = ''

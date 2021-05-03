@@ -28,6 +28,7 @@ function onXHRLoad() {
     lblTitle.value = apiData.Title
     btnTitle2.value = apiData.Title
     btnTitle3.value = apiData.Title
+    console.log(btnTitle3.value)
     lblRating.value = "Popcorn Score: " + apiData.imdbRating
     
     message = message + "Release Date: "+ apiData.Released + "\n"
